@@ -1,0 +1,10 @@
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+  background: var(--soft-lavender);
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
