@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="logo">Madeline Gall</div>
+        <div className="logo">mgalldev@gmail.com</div>
         <div className="nav-links">
           <a href="#automation">Automation</a>
           <a href="#capabilities">Capabilities</a>
