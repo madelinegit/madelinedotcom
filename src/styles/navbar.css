@@ -1,31 +1,55 @@
 .navbar {
   position: sticky;
   top: 0;
-  background: white;
-  border-bottom: 1px solid #eee;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   z-index: 1000;
 }
 
 .nav-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 20px;
+  padding: 14px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  font-weight: 600;
+/* LOGO AREA */
+.Banner {
+  display: flex;
+  align-items: center;
+}
+
+.banner-img {
+  height: 32px;       /* THIS controls logo size */
+  width: auto;
+  display: block;
+  opacity: 0.9;       /* makes it understated */
+  transition: opacity 0.3s ease;
+}
+
+.banner-img:hover {
+  opacity: 1;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links a {
-  margin-left: 20px;
+  margin-left: 28px;
   text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
   color: var(--dark-charcoal);
-  transition: var(--transition);
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
   color: var(--primary-lavender);
+  opacity: 1;
 }

@@ -6,22 +6,6 @@ function Home() {
   return (
     <>
       
-            <div style={{
-        display: "flex",
-        justifyContent: "center",
-        padding: "60px 20px 20px 20px"
-      }}>
-        <img
-          src={Banner}
-          alt="Madeline Gall"
-          style={{
-            maxWidth: "900px",
-            width: "90%",
-            height: "auto"
-          }}
-        />
-      </div>
-
       <Hero />
 
       <Section id="automation" title="Operations Automation">

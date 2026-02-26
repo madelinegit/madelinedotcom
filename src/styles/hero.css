@@ -1,10 +1,40 @@
 .hero {
+  background: linear-gradient(
+    to bottom,
+    rgba(188, 177, 214, 0.55),
+    rgba(188, 177, 214, 0.45)
+  );
+  
+  padding: 140px 20px 160px 20px;
   text-align: center;
-  padding: 140px 20px;
-  background: var(--soft-lavender);
+  
+  border-radius: 8px;
 }
 
-.hero p {
-  margin-top: 20px;
-  font-size: 1.2rem;
+/* Headline */
+.hero h1 {
+  font-size: 3.4rem;
+  font-weight: 500;      /* slightly lighter for elegance */
+  letter-spacing: -0.6px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  line-height: 1.2;
+}
+
+/* Subheadline */
+.hero p:first-of-type {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Micro positioning line */
+.hero p:last-of-type {
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  opacity: 0.65;
+  max-width: 800px;
+  margin: 0 auto;
 }
