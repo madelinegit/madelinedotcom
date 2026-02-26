@@ -1,3 +1,7 @@
+/* ============================= */
+/* BASE = MOBILE FIRST           */
+/* ============================= */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -9,23 +13,22 @@
 .nav-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 14px 28px;
+  padding: 14px 16px;   /* minimal horizontal padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* LOGO AREA */
+/* Logo */
 .Banner {
   display: flex;
   align-items: center;
 }
 
 .banner-img {
-  height: 32px;       /* THIS controls logo size */
+  height: 26px;
   width: auto;
-  display: block;
-  opacity: 0.9;       /* makes it understated */
+  opacity: 0.9;
   transition: opacity 0.3s ease;
 }
 
@@ -33,17 +36,17 @@
   opacity: 1;
 }
 
-/* NAV LINKS */
+/* Nav Links */
 .nav-links {
   display: flex;
   align-items: center;
 }
 
 .nav-links a {
-  margin-left: 28px;
+  margin-left: 18px;
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  font-size: 13px;
+  letter-spacing: 0.4px;
   color: var(--dark-charcoal);
   opacity: 0.8;
   transition: all 0.3s ease;
@@ -52,4 +55,50 @@
 .nav-links a:hover {
   color: var(--primary-lavender);
   opacity: 1;
+}
+
+
+/* ============================= */
+/* TABLET + STANDARD DESKTOP    */
+/* 768px and up                 */
+/* ============================= */
+
+@media (min-width: 768px) {
+
+  .nav-container {
+    padding: 16px 0px;   /* aligns with hero if you preferred zero */
+  }
+
+  .banner-img {
+    height: 32px;
+  }
+
+  .nav-links a {
+    margin-left: 28px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+}
+
+
+/* ============================= */
+/* LARGE DESKTOP                */
+/* 1440px and up                */
+/* ============================= */
+
+@media (min-width: 1440px) {
+
+  .nav-container {
+    padding: 20px 5px;
+  }
+
+  .banner-img {
+    height: 36px;
+  }
+
+  .nav-links a {
+    margin-left: 36px;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+  }
 }

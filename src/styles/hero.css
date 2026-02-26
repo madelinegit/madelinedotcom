@@ -1,40 +1,103 @@
+/* ============================= */
+/* BASE = MOBILE FIRST           */
+/* ============================= */
+
 .hero {
   background: linear-gradient(
-    to bottom,
-    rgba(188, 177, 214, 0.55),
-    rgba(188, 177, 214, 0.45)
+    180deg,
+    rgba(188, 177, 214, 0.42) 0%,
+    rgba(188, 177, 214, 0.32) 100%
   );
-  
-  padding: 140px 20px 160px 20px;
+
+  padding: 70px 20px 80px 20px;
   text-align: center;
-  
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 /* Headline */
 .hero h1 {
-  font-size: 3.4rem;
-  font-weight: 500;      /* slightly lighter for elegance */
-  letter-spacing: -0.6px;
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  line-height: 1.2;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  line-height: 1.22;
+
+  max-width: 95%;
+  margin: 0 auto 28px auto;
 }
 
 /* Subheadline */
 .hero p:first-of-type {
-  font-size: 1.25rem;
-  margin-bottom: 25px;
-  opacity: 0.9;
+  font-size: 1.05rem;
   font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 24px;
 }
 
-/* Micro positioning line */
+/* Descriptor line */
 .hero p:last-of-type {
-  font-size: 1rem;
-  letter-spacing: 0.8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  opacity: 0.65;
-  max-width: 800px;
+  opacity: 0.78;
+  max-width: 95%;
   margin: 0 auto;
+}
+
+
+/* ============================= */
+/* TABLET + STANDARD DESKTOP    */
+/* 768px and up                 */
+/* ============================= */
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 110px 20px 120px 20px;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+    letter-spacing: -0.6px;
+    line-height: 1.18;
+    max-width: 880px;
+    margin-bottom: 38px;
+  }
+
+  .hero p:first-of-type {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+  }
+
+  .hero p:last-of-type {
+    font-size: 0.95rem;
+    letter-spacing: 1.2px;
+    max-width: 820px;
+  }
+}
+
+
+/* ============================= */
+/* LARGE DESKTOP                */
+/* 1440px and up                */
+/* ============================= */
+
+@media (min-width: 1440px) {
+  .hero {
+    padding: 140px 20px 160px 20px;
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
+    max-width: 1000px;
+    letter-spacing: -0.8px;
+  }
+
+  .hero p:first-of-type {
+    font-size: 1.4rem;
+  }
+
+  .hero p:last-of-type {
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    max-width: 900px;
+  }
 }
