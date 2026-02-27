@@ -8,99 +8,106 @@ function Home() {
       
       <Hero />
 
-        <Section id="automation" title="Operations Automation">
+        <Section id="automation" title="Recent Projects">
 
-  <div className="automation-item">
-    <h3>Route Optimization Engine</h3>
-    <ul className="automation-list">
-      <li><strong>Problem:</strong> Redundant mileage and inefficient route ordering across field teams.</li>
-      <li><strong>Solution:</strong> Built a data-driven routing engine sequencing stops using structured address modeling and distance calculations.</li>
-      <li><strong>Impact:</strong> Reduced drive-time inefficiencies and improved daily route clarity.</li>
-    </ul>
-    <p className="stack"><strong>Stack:</strong> Python, Distance Algorithms, Structured Data Modeling</p>
-  </div><br/>
-
-  <div className="automation-item">
-    <h3>Secure Scheduling & Mapping Platform</h3>
-    <ul className="automation-list">
-      <li><strong>Problem:</strong> Manual scheduling lacked visibility into timing constraints and property-specific notes.</li>
-      <li><strong>Solution:</strong> Developed a secure, password-protected scheduling platform integrating Google Maps APIs and constraint-based logic.</li>
-      <li>Implemented group-based property tagging and automated note-flagging for house clusters.</li>
-      <li><strong>Impact:</strong> Increased schedule reliability and reduced coordination overhead.</li>
-    </ul>
-    <p className="stack"><strong>Stack:</strong> Python, Google Maps API, REST Integrations, Authentication Logic, Scheduling Algorithms</p>
-  </div>
+<div className="automation-item">
+  <h3>Route Optimization Engine</h3>
+  <ul className="automation-list">
+    <li><strong>Problem:</strong> Redundant mileage and inefficient route ordering across 415+ properties and 100–300 weekly operational tasks.</li>
+    <li><strong>Solution:</strong> Built a data-driven routing engine sequencing stops using structured address modeling, geospatial logic, and distance calculations.</li>
+    <li><strong>Impact:</strong> Eliminated ~20 hours/week of manual coordination across a 10-technician field team, contributing to a 24% operational efficiency improvement.</li>
+  </ul>
+  <p className="stack"><strong>Stack:</strong> Python, Distance Algorithms, Structured Data Modeling</p>
+</div>
 <br/>
-  <div className="automation-item">
-    <h3>Staffing Analytics & Forecasting Engine</h3>
-    <ul className="automation-list">
-      <li><strong>Problem:</strong> Staffing decisions were reactive and lacked structured visibility.</li>
-      <li><strong>Solution:</strong> Built a CSV ingestion and analytics pipeline evaluating service volume and workload distribution.</li>
-      <li>Automates PDF report generation with visual, data-centric conclusions for leadership review.</li>
-      <li><strong>Impact:</strong> Enabled proactive staffing adjustments and improved labor forecasting.</li>
-    </ul>
-    <p className="stack"><strong>Stack:</strong> Python, Pandas, Data Modeling, ReportLab, Workflow Analytics</p>
-  </div>
+
+<div className="automation-item">
+  <h3>Secure Scheduling & Mapping Platform</h3>
+  <ul className="automation-list">
+    <li><strong>Problem:</strong> Manual scheduling lacked visibility into timing constraints and property-specific notes.</li>
+    <li><strong>Solution:</strong> Developed a secure, password-protected scheduling platform integrating Google Maps APIs and constraint-based logic.</li>
+    <li>Implemented group-based property tagging and automated note-flagging for house clusters.</li>
+    <li><strong>Impact:</strong> Increased schedule reliability, centralized property intelligence, and reduced coordination friction across field operations.</li>
+  </ul>
+  <p className="stack"><strong>Stack:</strong> Python, Google Maps API, REST Integrations, Authentication Logic, Scheduling Algorithms</p>
+</div>
+<br/>
+
+<div className="automation-item">
+  <h3>Staffing Analytics & Forecasting Engine</h3>
+  <ul className="automation-list">
+    <li><strong>Problem:</strong> Staffing decisions were reactive and lacked structured visibility across high-volume service operations.</li>
+    <li><strong>Solution:</strong> Built a CSV ingestion and analytics pipeline evaluating service volume, workload distribution, and labor allocation patterns.</li>
+    <li>Automates PDF report generation with visual, data-centric conclusions for leadership review.</li>
+    <li><strong>Impact:</strong> Eliminated ~80 hours/week of manual staffing analysis and enabled proactive labor forecasting.</li>
+  </ul>
+  <p className="stack"><strong>Stack:</strong> Python, Pandas, Data Modeling, ReportLab, Workflow Analytics</p>
+</div>
 
 </Section>
-<Section id="systems" title="Systems">
+<Section id="systems" title="Tech Stack">
   <ul>
     <li>
-      <strong>Operational Architecture:</strong> Workflow automation across scheduling, inspections, staffing, routing, and reporting systems.
+      <strong>Frontend:</strong> React, TypeScript, JavaScript
     </li>
 
     <li>
-      <strong>Full-Stack Systems Development:</strong> Python (Flask), React, TypeScript, SQL — modular internal platforms and data-driven dashboards.
+      <strong>Backend:</strong> Python (Flask), REST API development
     </li>
 
     <li>
-      <strong>Data Architecture & Forecasting:</strong> Relational schema design (MySQL, SQLite), structured pipelines, cost modeling, and predictive operational analysis.
+      <strong>Databases:</strong> MySQL, SQLite, PostgreSQL
     </li>
 
     <li>
-      <strong>Routing & Geospatial Optimization:</strong> Google Maps API integrations, time-aware route logic, and field efficiency modeling.
+      <strong>Data & Reporting:</strong> Pandas, structured data pipelines, PDF generation (ReportLab)
     </li>
 
     <li>
-      <strong>API & Service Orchestration:</strong> REST integrations, SaaS platform connectivity, authentication controls, and secure environment configuration.
+      <strong>Cloud & Infrastructure:</strong> AWS (EC2, S3, IAM), Linux server configuration, Nginx fundamentals
     </li>
 
     <li>
-      <strong>Cloud Infrastructure & Deployment:</strong> AWS (EC2, S3, IAM), Git workflows, Vercel deployments, environment management, and production debugging.
+      <strong>Containerization & CI/CD:</strong> Docker, GitHub Actions
     </li>
 
     <li>
-      <strong>Delivery & Systems Leadership:</strong> Agile execution, technical scoping, cross-functional translation, and multi-phase rollout oversight.
+      <strong>Integrations & APIs:</strong> REST APIs, Google Maps API, third-party SaaS integrations
     </li>
+
     <li>
-  <strong>Security & Access Controls:</strong> Role-based permissions, environment isolation, and secure internal system design.
-</li>
+      <strong>Performance & Optimization:</strong> Caching strategies (Redis fundamentals), production monitoring & debugging
+    </li>
+
+    <li>
+      <strong>Dev Workflow:</strong> Git version control, environment configuration, structured deployment practices
+    </li>
   </ul>
 </Section>
 
       <Section id="capabilities" title="Capabilities">
-        <ul>
-          <li>
-            <strong>Process Automation & Efficiency:</strong> Replace manual workflows with structured internal tools that reduce administrative overhead and improve operational clarity.
-          </li>
+  <ul>
+    <li>
+      <strong>Operational System Design:</strong> Architect automation frameworks for high-volume service operations.
+    </li>
 
-          <li>
-            <strong>Operational Data Strategy:</strong> Transform raw operational data into forecasting dashboards and cost models that support executive decision-making.
-          </li>
+    <li>
+      <strong>Process Optimization:</strong> Replace manual coordination with structured, scalable internal platforms.
+    </li>
 
-          <li>
-            <strong>Technology Implementation:</strong> Lead development and deployment of scalable internal systems while integrating third-party platforms to streamline operations.
-          </li>
+    <li>
+      <strong>Data-Driven Planning:</strong> Translate operational data into forecasting models and decision-support systems.
+    </li>
 
-          <li>
-            <strong>Systems Leadership:</strong> Translate operational challenges into structured technical roadmaps and oversee multi-phase system builds from scope through rollout.
-          </li>
+    <li>
+      <strong>Platform Implementation:</strong> Design and deploy secure internal systems integrating third-party services.
+    </li>
 
-          <li>
-            <strong>Cross-Functional Execution:</strong> Coordinate between operations, field teams, and stakeholders to ensure systems are usable, documented, and scalable.
-          </li>
-        </ul>
-      </Section>
+    <li>
+      <strong>End-to-End Delivery:</strong> Lead builds from technical scoping through rollout and adoption.
+    </li>
+  </ul>
+</Section>
 
       <Section id="experience" title="Experience">
 
