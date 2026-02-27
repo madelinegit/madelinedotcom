@@ -69,3 +69,7 @@ p {
 #experience li {
   margin-bottom: 0.5rem;
 }
+
+#experience ul {
+  list-style-position: inside;
+}
