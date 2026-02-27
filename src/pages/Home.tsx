@@ -66,7 +66,64 @@ function Home() {
       </Section>
 
       <Section id="experience" title="Experience">
-        <p>Experience section goes here.</p>
+
+      <div className="experience-item">
+        <h3>Technical Product & Automation Lead</h3>
+        <p><strong>Tahoe Getaways</strong> · Full-time · May 2024 – Present</p>
+        <ul>
+          <li>Architect and deliver internal automation systems (Python, TypeScript, SQL) replacing manual operational workflows</li>
+          <li>Design structured data pipelines and executive dashboards supporting labor forecasting and cost optimization</li>
+          <li>Translate operational constraints into technical roadmaps, leading multi-phase system builds from scope through rollout</li>
+          <li>Oversee cloud-hosted deployments and environment configuration, managing Git-based version control and production stability</li>
+          <li>Drive system-level automation initiatives increasing operational visibility and reducing manual coordination</li>
+        </ul>
+      </div>
+
+      <div className="experience-item">
+        <h3>Founder & Systems Developer</h3>
+        <p><strong>EcoDev LLC</strong> · Freelance · Aug 2023 – Nov 2024</p>
+        <ul>
+          <li>Designed and deployed full-stack applications using Python (Flask) and MySQL with structured relational data modeling</li>
+          <li>Implemented secure authentication workflows and scalable backend validation logic</li>
+          <li>Managed AWS EC2 infrastructure, routing, uptime, and cost optimization</li>
+          <li>Established version-controlled, container-ready development practices ensuring deployment consistency</li>
+        </ul>
+      </div>
+
+      <div className="experience-item">
+        <h3>Frontend Systems Engineer (Contract)</h3>
+        <p><strong>Nexalure Technologies</strong> · Oct 2023 – May 2024 · Remote</p>
+        <ul>
+          <li>Architected modular React + TypeScript components within a production-scale application</li>
+          <li>Directed state orchestration using Redux to maintain cross-view data integrity</li>
+          <li>Integrated REST API pipelines enabling real-time UI synchronization</li>
+          <li>Contributed to sprint-based Agile engineering delivery cycles</li>
+        </ul>
+      </div>
+
+      <div className="experience-item">
+        <h3>Healthcare Data Specialist</h3>
+        <p><strong>Embrace Pet Insurance</strong> · Aug 2019 – Jul 2023</p>
+        <ul>
+          <li>Managed structured enterprise datasets within regulated financial systems</li>
+          <li>Queried and validated datasets using SQL to ensure reconciliation accuracy and reporting integrity</li>
+          <li>Leveraged Tableau to analyze performance metrics and identify workflow inconsistencies</li>
+          <li>Maintained CRM data governance within Salesforce environments</li>
+          <li>Implemented process controls improving data reliability and SLA performance</li>
+        </ul>
+      </div>
+
+      <div className="experience-item">
+        <h3>Commercial & International Operations Leadership</h3>
+        <p>2015 – 2023</p>
+        <ul>
+          <li>Directed high-volume operational workflows across international event and commercial environments</li>
+          <li>Coordinated vendor logistics and cross-functional execution under strict production timelines</li>
+          <li>Implemented structured execution frameworks reducing operational error and protecting revenue continuity</li>
+          <li>Operated bilingually (Spanish C1) within international education and commercial environments</li>
+        </ul>
+      </div>
+
       </Section>
         
       <Section id="education" title="Education">
@@ -95,7 +152,6 @@ function Home() {
         <div className="education-item">
           <h3>Languages</h3>
           <p>Spanish — C1 (Advanced / Professional Working Proficiency)</p>
-          <p>English — Native</p>
           <p>2025</p>
         </div>
 
