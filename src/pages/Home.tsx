@@ -11,17 +11,17 @@ function Home() {
         <Section id="automation" title="Operations Automation">
 
   <div className="automation-item">
-    <h4>Route Optimization Engine</h4>
+    <h3>Route Optimization Engine</h3>
     <ul className="automation-list">
       <li><strong>Problem:</strong> Redundant mileage and inefficient route ordering across field teams.</li>
       <li><strong>Solution:</strong> Built a data-driven routing engine sequencing stops using structured address modeling and distance calculations.</li>
       <li><strong>Impact:</strong> Reduced drive-time inefficiencies and improved daily route clarity.</li>
     </ul>
     <p className="stack"><strong>Stack:</strong> Python, Distance Algorithms, Structured Data Modeling</p>
-  </div>
+  </div><br/>
 
   <div className="automation-item">
-    <h4>Secure Scheduling & Mapping Platform</h4>
+    <h3>Secure Scheduling & Mapping Platform</h3>
     <ul className="automation-list">
       <li><strong>Problem:</strong> Manual scheduling lacked visibility into timing constraints and property-specific notes.</li>
       <li><strong>Solution:</strong> Developed a secure, password-protected scheduling platform integrating Google Maps APIs and constraint-based logic.</li>
@@ -30,9 +30,9 @@ function Home() {
     </ul>
     <p className="stack"><strong>Stack:</strong> Python, Google Maps API, REST Integrations, Authentication Logic, Scheduling Algorithms</p>
   </div>
-
+<br/>
   <div className="automation-item">
-    <h4>Staffing Analytics & Forecasting Engine</h4>
+    <h3>Staffing Analytics & Forecasting Engine</h3>
     <ul className="automation-list">
       <li><strong>Problem:</strong> Staffing decisions were reactive and lacked structured visibility.</li>
       <li><strong>Solution:</strong> Built a CSV ingestion and analytics pipeline evaluating service volume and workload distribution.</li>
