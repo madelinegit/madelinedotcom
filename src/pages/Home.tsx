@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import Section from "../components/Section";
-import Banner from "../assets/brand/mg-horizontal.svg";
+// import Banner from "../assets/brand/mg-horizontal.svg";
 
 function Home() {
   return (
