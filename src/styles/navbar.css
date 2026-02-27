@@ -13,7 +13,7 @@
 .nav-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 14px 16px;   /* minimal horizontal padding */
+  padding: 14px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,6 +59,29 @@
 
 
 /* ============================= */
+/* SMALL MOBILE                  */
+/* 480px and below               */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    padding: 12px 14px;
+  }
+
+  .banner-img {
+    height: 22px;
+  }
+
+  .nav-links a {
+    margin-left: 12px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+}
+
+
+/* ============================= */
 /* TABLET + STANDARD DESKTOP    */
 /* 768px and up                 */
 /* ============================= */
@@ -66,7 +89,7 @@
 @media (min-width: 768px) {
 
   .nav-container {
-    padding: 16px 0px;   /* aligns with hero if you preferred zero */
+    padding: 16px 0px;
   }
 
   .banner-img {
