@@ -73,3 +73,14 @@ p {
 #experience ul {
   list-style-position: inside;
 }
+
+
+#automation .automation-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0.75rem 0;
+}
+
+#automation .automation-list li {
+  margin-bottom: 0.5rem;
+}
