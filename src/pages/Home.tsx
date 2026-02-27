@@ -9,8 +9,34 @@ function Home() {
       <Hero />
 
       <Section id="automation" title="Operations Automation">
-        <p>Projects will go here.</p>
-      </Section>
+        
+  <div className="automation-item">
+    <h4>Route Optimization Engine</h4>
+    <p><strong>Problem:</strong> Field technicians experienced redundant mileage and inefficient route ordering.</p>
+    <p><strong>Solution:</strong> Built a data-driven routing engine that sequences stops using structured address modeling and distance calculations.</p>
+    <p><strong>Impact:</strong> Reduced drive-time inefficiencies and improved daily route clarity for field teams.</p>
+    <p className="stack"><strong>Stack:</strong> Python, Distance Algorithms, Structured Data Modeling</p>
+  </div>
+
+  <div className="automation-item">
+    <h4>Secure Scheduling & Mapping Platform</h4>
+    <p><strong>Problem:</strong> Manual scheduling lacked visibility into timing constraints and property-specific operational notes.</p>
+    <p><strong>Solution:</strong> Developed a secure, password-protected scheduling platform integrating Google Maps APIs and constraint-based logic across multiple technicians.</p>
+    <p>Implemented group-based property tagging and automated note-flagging to surface critical information tied to specific house clusters before routes are finalized.</p>
+    <p><strong>Impact:</strong> Increased schedule reliability, reduced coordination overhead, and improved operational awareness across field teams.</p>
+    <p className="stack"><strong>Stack:</strong> Python, Google Maps API, REST Integrations, Authentication Logic, Scheduling Algorithms</p>
+  </div>
+
+  <div className="automation-item">
+    <h4>Staffing Analytics & Forecasting Engine</h4>
+    <p><strong>Problem:</strong> Staffing decisions were reactive and lacked structured performance visibility.</p>
+    <p><strong>Solution:</strong> Created a CSV ingestion and analytics pipeline evaluating service volume, task density, and zone-based workload distribution.</p>
+    <p>Automates generation of structured PDF reports with clear, visual, data-driven conclusions tailored for operational review and planning discussions.</p>
+    <p><strong>Impact:</strong> Enabled proactive staffing adjustments, improved labor forecasting, and translated raw operational data into executive-ready insight.</p>
+    <p className="stack"><strong>Stack:</strong> Python, Pandas, Data Modeling, ReportLab (PDF Generation), Workflow Analytics</p>
+  </div>
+
+</Section>
 
       <Section id="systems" title="Systems">
         <ul>
