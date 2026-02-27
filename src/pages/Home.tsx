@@ -43,34 +43,40 @@ function Home() {
   </div>
 
 </Section>
-      <Section id="systems" title="Systems">
-        <ul>
-          <li>
-            <strong>Operational Systems Architecture:</strong> Design and implement internal workflow automation tools replacing manual processes. Structure operational data models for scheduling, inspections, staffing, routing, and reporting.
-          </li>
+<Section id="systems" title="Systems">
+  <ul>
+    <li>
+      <strong>Operational Architecture:</strong> Workflow automation across scheduling, inspections, staffing, routing, and reporting systems.
+    </li>
 
-          <li>
-            <strong>Full-Stack Development:</strong> Python (Flask), React, TypeScript, JavaScript, SQL. Build internal dashboards, component-driven interfaces, and modular system logic.
-          </li>
+    <li>
+      <strong>Full-Stack Systems Development:</strong> Python (Flask), React, TypeScript, SQL — modular internal platforms and data-driven dashboards.
+    </li>
 
-          <li>
-            <strong>Database & Data Modeling:</strong> MySQL, SQLite. Design relational schemas, write optimized queries, manage structured data pipelines, and transform operational exports into actionable systems.
-          </li>
+    <li>
+      <strong>Data Architecture & Forecasting:</strong> Relational schema design (MySQL, SQLite), structured pipelines, cost modeling, and predictive operational analysis.
+    </li>
 
-          <li>
-            <strong>API & Systems Integration:</strong> REST API integrations (Google Maps, SaaS platforms), authentication handling, environment configuration, and external service orchestration.
-          </li>
+    <li>
+      <strong>Routing & Geospatial Optimization:</strong> Google Maps API integrations, time-aware route logic, and field efficiency modeling.
+    </li>
 
-          <li>
-            <strong>Cloud & Deployment:</strong> AWS (EC2, S3, IAM), Git-based version control, Vercel deployments, environment management, production debugging.
-          </li>
+    <li>
+      <strong>API & Service Orchestration:</strong> REST integrations, SaaS platform connectivity, authentication controls, and secure environment configuration.
+    </li>
 
-          <li>
-            <strong>Workflow & Delivery:</strong> Agile sprint coordination, technical requirement scoping, documentation-driven builds, cross-functional systems translation.
-          </li>
-        </ul>
-      </Section>
+    <li>
+      <strong>Cloud Infrastructure & Deployment:</strong> AWS (EC2, S3, IAM), Git workflows, Vercel deployments, environment management, and production debugging.
+    </li>
 
+    <li>
+      <strong>Delivery & Systems Leadership:</strong> Agile execution, technical scoping, cross-functional translation, and multi-phase rollout oversight.
+    </li>
+    <li>
+  <strong>Security & Access Controls:</strong> Role-based permissions, environment isolation, and secure internal system design.
+</li>
+  </ul>
+</Section>
 
       <Section id="capabilities" title="Capabilities">
         <ul>
