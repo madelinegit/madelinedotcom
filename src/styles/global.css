@@ -52,3 +52,20 @@ p {
 .section li {
   margin-bottom: 1rem;
 }
+
+#experience h1,
+#experience h2,
+#experience h3,
+#experience p,
+#experience ul {
+  margin: 0;
+}
+
+#experience ul {
+  padding-left: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+#experience li {
+  margin-bottom: 0.5rem;
+}
