@@ -68,10 +68,38 @@ function Home() {
       <Section id="experience" title="Experience">
         <p>Experience section goes here.</p>
       </Section>
-
+        
       <Section id="education" title="Education">
-        <p>Education section goes here.</p>
-      </Section>
+
+        <div className="education-item">
+          <h3>Ohio University</h3>
+          <p>Bachelor of Science — Anthropology</p>
+          <p>Associate of Science — Information Technology</p>
+          <p>Teaching English as a Foreign Language (TEFL) Certificate</p>
+          <p>2011 – 2015</p>
+        </div>
+
+        <div className="education-item">
+          <h3>Coding Dojo</h3>
+          <p>Software Development Bootcamp — Computer Software Engineering</p>
+          <p>Full-Stack Python, MySQL, JavaScript, React, Version Control</p>
+          <p>Nov 2022 – Aug 2023</p>
+        </div>
+
+        <div className="education-item">
+          <h3>Project Management Institute (PMI)</h3>
+          <p>Certified Associate in Project Management (CAPM®)</p>
+          <p>2022</p>
+        </div>
+
+        <div className="education-item">
+          <h3>Languages</h3>
+          <p>Spanish — C1 (Advanced / Professional Working Proficiency)</p>
+          <p>English — Native</p>
+          <p>2025</p>
+        </div>
+
+</Section>
     </>
   );
 }
