@@ -192,7 +192,8 @@ function Home() {
           <p>Certified Associate in Project Management (CAPM®)</p>
           <p>2020</p>
         </div>
-
+      </Section>
+    </br>
         <div className="education-item">
           <h3>Languages</h3>
           <p>Spanish — C1 (Advanced / Professional Working Proficiency)</p>
