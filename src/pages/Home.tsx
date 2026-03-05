@@ -115,11 +115,11 @@ function Home() {
         <h3>Technical Product & Automation Lead</h3>
         <p><strong>Tahoe Getaways</strong> · Full-time · May 2024 – Present</p>
         <ul>
-          <li>Architect and deliver internal automation systems (Python, TypeScript, SQL) replacing manual operational workflows</li>
-          <li>Design structured data pipelines and executive dashboards supporting labor forecasting and cost optimization</li>
-          <li>Translate operational constraints into technical roadmaps, leading multi-phase system builds from scope through rollout</li>
-          <li>Oversee cloud-hosted deployments and environment configuration, managing Git-based version control and production stability</li>
+          <li>Architect and deliver internal automation systems (Python, SQL, Deployment) replacing manual operational workflows</li>
+          <li>Design data analysis tools to supporting labor forecasting and cost optimization</li>
           <li>Drive system-level automation initiatives increasing operational visibility and reducing manual coordination</li>
+          <li>Translate operational constraints into solution-focused roadmaps to support rapid growth.</li>
+          <li>Oversee cloud-hosted deployments and environment configuration, managing Git-based version control and production stability</li>
         </ul>
       </div>
 
@@ -149,58 +149,47 @@ function Home() {
         <h3>Healthcare Data Specialist</h3>
         <p><strong>Embrace Pet Insurance</strong> · Aug 2019 – Jul 2023</p>
         <ul>
-          <li>Managed structured enterprise datasets within regulated financial systems</li>
-          <li>Queried and validated datasets using SQL to ensure reconciliation accuracy and reporting integrity</li>
+          <li>Structured datasets within regulated financial systems</li>
+          <li>Queried and validated datasets using SQL to verify database integrity</li>
           <li>Leveraged Tableau to analyze performance metrics and identify workflow inconsistencies</li>
           <li>Maintained CRM data governance within Salesforce environments</li>
           <li>Implemented process controls improving data reliability and SLA performance</li>
         </ul>
       </div>
 
-      <div className="experience-item">
-        <h3>Commercial & International Operations Leadership</h3>
-        <p>2015 – 2023</p>
-        <ul>
-          <li>Directed high-volume operational workflows across international event and commercial environments</li>
-          <li>Coordinated vendor logistics and cross-functional execution under strict production timelines</li>
-          <li>Implemented structured execution frameworks reducing operational error and protecting revenue continuity</li>
-          <li>Operated bilingually (Spanish C1) within international education and commercial environments</li>
-        </ul>
-      </div>
-
       </Section>
         
       <Section id="education" title="Education">
-
-        <div className="education-item">
-          <h3>Ohio University</h3>
-          <p>Bachelor of Science — Anthropology</p>
-          <p>Associate of Science — Information Technology</p>
-          <p>Teaching English as a Foreign Language (TEFL) Certificate</p>
-          <p>2011 – 2015</p>
-        </div>
-
+        
         <div className="education-item">
           <h3>Coding Dojo</h3>
-          <p>Software Development Bootcamp — Computer Software Engineering</p>
+          <p>Software Development Certification — Computer Software Engineering</p>
           <p>Full-Stack Python, MySQL, JavaScript, React, Version Control</p>
-          <p>Nov 2022 – Aug 2023</p>
+          <p>2022</p>
         </div>
 
         <div className="education-item">
           <h3>Project Management Institute (PMI)</h3>
           <p>Certified Associate in Project Management (CAPM®)</p>
-          <p>2020</p>
-        </div>
-      </Section>
-    <br>
-        <div className="education-item">
-          <h3>Languages</h3>
-          <p>Spanish — C1 (Advanced / Professional Working Proficiency)</p>
-          <p></p>
+          <p>2019</p>
         </div>
 
-</Section>
+        <div className="education-item">
+            <h3>Ohio University</h3>
+            <p>Bachelor of Science — Anthropology</p>
+            <p>Associate of Science — Information Technology</p>
+            <p>Certificate in Strategic Business Leadership</p>
+            <p>2011 – 2014</p>
+          </div>
+          <br/>
+        <div className="education-item">
+          <h4>Languages</h4>
+          <p className="small-text">Spanish — C1 (Advanced / Professional Working Proficiency)</p>
+          <p className="small-text"> Portuguese — B2 (Intermediate) </p>
+        </div>
+
+    </Section>
+
     </>
   );
 }

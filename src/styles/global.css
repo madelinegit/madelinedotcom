@@ -85,3 +85,7 @@ p {
 #automation .automation-list li {
   margin-bottom: 0.5rem;
 }
+
+.small-text {
+  font-size: 14px;
+}
