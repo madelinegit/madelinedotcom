@@ -190,7 +190,7 @@ function Home() {
         <div className="education-item">
           <h3>Project Management Institute (PMI)</h3>
           <p>Certified Associate in Project Management (CAPM®)</p>
-          <p>2022</p>
+          <p>2020</p>
         </div>
 
         <div className="education-item">
