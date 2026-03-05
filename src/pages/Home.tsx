@@ -193,11 +193,11 @@ function Home() {
           <p>2020</p>
         </div>
       </Section>
-    </br>
+    <br>
         <div className="education-item">
           <h3>Languages</h3>
           <p>Spanish — C1 (Advanced / Professional Working Proficiency)</p>
-          <p>2025</p>
+          <p></p>
         </div>
 
 </Section>
