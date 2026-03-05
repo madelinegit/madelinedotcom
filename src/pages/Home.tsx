@@ -154,7 +154,9 @@ function Home() {
         <ul>
           <li>Structured datasets within regulated financial systems</li>
           <li>Queried and validated datasets using SQL to verify database integrity</li>
+          {/*
           <li>Leveraged Tableau to analyze performance metrics and identify workflow inconsistencies</li>
+          */}
           <li>Maintained CRM data governance within Salesforce environments</li>
           <li>Implemented process controls improving data reliability and SLA performance</li>
         </ul>
