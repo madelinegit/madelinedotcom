@@ -161,20 +161,20 @@ function Home() {
         </div>
       </Section>
 
-      {/* TECH STACK */}
-      <Section id="systems" title="Tech Stack">
-        <ul>
-          <li><strong>Frontend:</strong> React, TypeScript</li>
-          <li><strong>Backend:</strong> Python (Flask), REST API Architecture</li>
-          <li><strong>Databases:</strong> MySQL, SQLite, PostgreSQL</li>
-          <li><strong>Data &amp; Reporting:</strong> Pandas, structured data pipelines, PDF generation (ReportLab)</li>
-          <li><strong>Cloud &amp; Infrastructure:</strong> AWS (EC2, S3, IAM), Linux server configuration, Nginx fundamentals</li>
-          <li><strong>Containerization &amp; CI/CD:</strong> Docker, GitHub Actions</li>
-          <li><strong>Integrations &amp; APIs:</strong> REST APIs, Google Maps API, third-party SaaS integrations</li>
-          <li><strong>Performance &amp; Optimization:</strong> Caching strategies (Redis fundamentals), production monitoring and debugging</li>
-          <li><strong>Dev Workflow:</strong> Git version control, environment configuration, structured deployment practices</li>
-        </ul>
-      </Section>
+    {/* TECH STACK */}
+    <Section id="systems" title="Tech Stack">
+      <p>
+        <strong>Frontend:</strong> React, TypeScript — building production UIs for internal tools and operational workflows<br/>
+        <strong>Backend:</strong> Python (Flask) with REST API design for scalable applications<br/>
+        <strong>Databases:</strong> MySQL, PostgreSQL, SQLite — schema design, querying, optimization<br/>
+        <strong>Data & Reporting:</strong> Pandas pipelines and automated PDF reporting (ReportLab)<br/>
+        <strong>Cloud & Infrastructure:</strong> AWS (EC2, S3, IAM), Linux servers, Nginx configuration and deployment<br/>
+        <strong>Containerization & CI/CD:</strong> Docker and GitHub Actions for automated builds and deployments<br/>
+        <strong>Integrations & APIs:</strong> REST APIs, Google Maps API, and third-party SaaS integrations<br/>
+        <strong>Performance:</strong> Redis caching, production monitoring and debugging<br/>
+        <strong>Workflow:</strong> Git version control, environment management, structured deployment practices
+      </p>
+    </Section>
 
       {/* EXPERIENCE */}
       <Section id="experience" title="Experience">
