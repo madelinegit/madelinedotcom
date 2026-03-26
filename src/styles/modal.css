@@ -1,0 +1,213 @@
+/* ============================= */
+/* MODAL — mobile first          */
+/* ============================= */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(46, 46, 46, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  overflow-y: auto;
+  animation: fadeBackdrop 0.2s ease forwards;
+}
+
+@keyframes fadeBackdrop {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-article {
+  position: relative;
+  background: #faf9f7;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 720px;
+  padding: 2.25rem 1.5rem 3rem;
+  box-shadow: 0 24px 80px rgba(46, 46, 46, 0.18);
+  animation: slideUp 0.25s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.modal-close:hover {
+  color: #2e2e2e;
+  background: rgba(46, 46, 46, 0.06);
+}
+
+.modal-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a6e9a;
+  margin-bottom: 0.85rem;
+}
+
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2e2e2e;
+  margin-bottom: 0.65rem;
+}
+
+.modal-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: #888;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.modal-rule {
+  height: 1px;
+  background: rgba(200, 182, 255, 0.4);
+  margin: 1.5rem 0;
+}
+
+.modal-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem;
+  background: rgba(200, 182, 255, 0.12);
+  border-radius: 4px;
+}
+
+.modal-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
+}
+
+.modal-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5a4e7a;
+  line-height: 1;
+}
+
+.modal-stat-label {
+  font-size: 0.68rem;
+  color: #888;
+  line-height: 1.4;
+}
+
+.modal-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin: 1.75rem 0 0.65rem;
+  line-height: 1.3;
+}
+
+.modal-body {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.modal-quote {
+  border-left: 3px solid #c8b6ff;
+  padding: 0.5rem 0 0.5rem 1.1rem;
+  margin: 1.5rem 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #5a4e7a;
+  line-height: 1.7;
+}
+
+.modal-list {
+  padding-left: 1.25rem;
+  margin: 0.75rem 0 1rem;
+  list-style-type: disc;
+}
+
+.modal-list li {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 0.45rem;
+}
+
+.modal-byline {
+  font-size: 0.75rem;
+  color: #aaa;
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+
+/* ── 480px ── */
+@media (min-width: 480px) {
+  .modal-article { padding: 2.5rem 2rem 3rem; }
+  .modal-title { font-size: 1.65rem; }
+  .modal-body { font-size: 0.95rem; }
+}
+
+/* ── 768px — stats go 4-col ── */
+@media (min-width: 768px) {
+  .modal-backdrop { padding: 2.5rem 1.5rem; }
+  .modal-article { padding: 3rem 2.5rem 3.5rem; }
+  .modal-title { font-size: 1.85rem; }
+  .modal-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1.4rem;
+  }
+  .modal-stat-num { font-size: 1.45rem; }
+  .modal-h2 { font-size: 1.2rem; }
+  .modal-body { font-size: 0.97rem; }
+}
+
+/* ── 1024px ── */
+@media (min-width: 1024px) {
+  .modal-backdrop { padding: 3rem 2rem; }
+  .modal-article { padding: 3.5rem 3rem 4rem; }
+  .modal-title { font-size: 2rem; }
+  .modal-subtitle { font-size: 1rem; }
+  .modal-stat-num { font-size: 1.5rem; }
+  .modal-h2 { font-size: 1.25rem; }
+  .modal-body { font-size: 0.97rem; }
+  .modal-list li { font-size: 0.95rem; }
+}
+
+/* ── 1440px ── */
+@media (min-width: 1440px) {
+  .modal-title { font-size: 2.1rem; }
+  .modal-body { font-size: 1rem; }
+  .modal-h2 { font-size: 1.3rem; margin-top: 2rem; }
+}
