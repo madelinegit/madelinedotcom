@@ -11,8 +11,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Playfair Display', serif;
-  background-color: var(--ink);
-  color: var(--cream);
+  background-color: #f5f0e8;
+  color: #1e2e26;
   line-height: 1.6;
   font-weight: 400;
   letter-spacing: 0.2px;
@@ -24,37 +24,31 @@ section {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
+h1 { font-size: 3rem; font-weight: 600; letter-spacing: -0.5px; }
 
 h2 {
   font-size: 2rem;
   margin-bottom: 30px;
   font-weight: 500;
-  color: var(--cream);
+  color: #1e2e26;
 }
 
-h3 {
-  color: var(--cream);
-  margin-bottom: 0.5rem;
-}
+h3 { color: #1e2e26; margin-bottom: 0.5rem; }
 
-p { color: var(--muted-text); font-size: 1rem; }
+p { color: #5a6a62; font-size: 1rem; }
 
 /* ── Section cards ── */
 .section {
-  background: #22221f;
+  background: #ffffff;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  margin-bottom: 1.5rem;
-  transition: border-color 0.3s ease;
+  border: 1px solid #ddd8ce;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
-  border-color: rgba(58, 107, 122, 0.3);
+  border-color: #c8b6ff;
+  box-shadow: 0 4px 20px rgba(200, 182, 255, 0.12);
 }
 
 .section ul {
@@ -65,8 +59,8 @@ p { color: var(--muted-text); font-size: 1rem; }
 
 .section li {
   margin-bottom: 1rem;
-  color: #a8a89e;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: #5a6a62;
+  border-bottom: 1px solid #f0ebe0;
   padding-bottom: 1rem;
 }
 
@@ -76,9 +70,25 @@ p { color: var(--muted-text); font-size: 1rem; }
   margin-bottom: 0;
 }
 
-.section li strong {
-  color: var(--cream);
-  font-weight: 500;
+.section li strong { color: #1e2e26; font-weight: 500; }
+
+/* ── Section h2 accent line ── */
+.section h2 {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  color: #1e2e26;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: #c8b6ff;
+  border-radius: 1px;
 }
 
 /* ── Experience / Education ── */
@@ -96,13 +106,13 @@ p { color: var(--muted-text); font-size: 1rem; }
   margin-bottom: 0.5rem;
   border-bottom: none;
   padding-bottom: 0;
-  color: #a8a89e;
+  color: #5a6a62;
 }
 
 .experience-item, .education-item {
   margin-bottom: 2.75rem;
   padding-bottom: 2.75rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid #ede8df;
 }
 
 .experience-item:last-child,
@@ -125,13 +135,13 @@ p { color: var(--muted-text); font-size: 1rem; }
   margin-bottom: 0.5rem;
   border-bottom: none;
   padding-bottom: 0;
-  color: #a8a89e;
+  color: #5a6a62;
 }
 
 .automation-item {
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid #ede8df;
 }
 
 .automation-item:last-child {
@@ -143,7 +153,7 @@ p { color: var(--muted-text); font-size: 1rem; }
 .stack {
   margin-top: 0.75rem;
   font-size: 0.82rem;
-  color: var(--lake-light);
+  color: #7a6e9a;
   font-family: 'DM Sans', sans-serif;
   letter-spacing: 0.02em;
 }
@@ -158,40 +168,19 @@ p { color: var(--muted-text); font-size: 1rem; }
   font-family: 'Playfair Display', serif;
   font-size: 0.88rem;
   font-style: italic;
-  color: var(--lake-light);
+  color: #7a6e9a;
   cursor: pointer;
-  border-bottom: 1px solid rgba(90, 138, 150, 0.4);
+  border-bottom: 1px solid rgba(200, 182, 255, 0.5);
   transition: color 0.2s, border-color 0.2s;
 }
 
 .case-study-trigger:hover {
-  color: var(--cream);
-  border-bottom-color: var(--cream);
+  color: #1e2e26;
+  border-bottom-color: #1e2e26;
 }
 
-/* ── Section accent line on h2 ── */
-.section h2 {
-  position: relative;
-  padding-bottom: 0.75rem;
-  margin-bottom: 2rem;
-}
-
-.section h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2.5rem;
-  height: 2px;
-  background: var(--lake);
-  border-radius: 1px;
-}
-
-/* ── Contact section ── */
-#contact a {
-  color: var(--lake-light);
-}
-
-#contact a:hover {
-  color: var(--cream);
-}
+/* ── Contact ── */
+#contact p { color: #5a6a62; }
+#contact a { color: #7a6e9a; }
+#contact a:hover { color: #1e2e26; }
+#contact a:hover { color: #1e2e26; }
