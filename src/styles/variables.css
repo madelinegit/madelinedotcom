@@ -1,25 +1,23 @@
 :root {
-  /* ── Brand palette ── */
-  --pine:            #2d4a3e;
-  --pine-dark:       #1e3329;
-  --lake:            #3a6b7a;
-  --lake-light:      #5a8a96;
-  --amber:           #c97d3a;
-  --cream:           #faf7f2;
-  --parchment:       #f0ebe0;
-  --ink:             #1a1a18;
-  --muted-text:      #6a6a60;
-  --rule:            #d4cfc4;
+  --pine:             #2d4a3e;
+  --pine-dark:        #1e3329;
+  --lake:             #3a6b7a;
+  --lake-light:       #5a8a96;
+  --lavender:         #c8b6ff;
+  --lavender-muted:   #7a6e9a;
+  --cream:            #faf7f2;
+  --parchment:        #f5f0e8;
+  --ink:              #1e2e26;
+  --muted-text:       #5a6a62;
+  --rule:             #ddd8ce;
 
-  /* ── Legacy aliases (keeps existing components from breaking) ── */
-  --primary-lavender: #8a9e7a;
-  --soft-lavender:    #d8e8d4;
+  --primary-lavender: #c8b6ff;
+  --soft-lavender:    #e7ddff;
   --warm-tan:         #d8c3a5;
-  --soft-gray:        #f5f3ee;
-  --dark-charcoal:    #1a1a18;
+  --soft-gray:        #f5f0e8;
+  --dark-charcoal:    #1e2e26;
 
-  /* ── Layout ── */
-  --max-width:       1100px;
-  --section-padding: 100px;
-  --transition:      all 0.3s ease;
+  --max-width:        1100px;
+  --section-padding:  80px;
+  --transition:       all 0.3s ease;
 }
