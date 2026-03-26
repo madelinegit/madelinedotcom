@@ -59,6 +59,7 @@ function Home() {
           >
             northlakedispatch.com ↗
           </a>
+           </div>
 
         <div className="automation-item">
           <h3>Staffing Analytics &amp; Forecasting Tool</h3>
