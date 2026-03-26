@@ -52,14 +52,13 @@ function Home() {
             Read the full case study →
           </button>
           
-            href="https://northlakedispatch.com"
+           <a href="https://northlakedispatch.com"
             target="_blank"
             rel="noreferrer"
             className="dispatch-link"
           >
             northlakedispatch.com ↗
           </a>
-        </div>
 
         <div className="automation-item">
           <h3>Staffing Analytics &amp; Forecasting Tool</h3>
