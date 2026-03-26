@@ -114,6 +114,21 @@ function Home() {
           >
             Read the full case study →
           </button>
+
+          <button
+            className="case-study-trigger"
+            onClick={() => setShowCaseStudy(true)}
+          >
+            Read the full case study →
+          </button>
+        
+          href="https://northlakedispatch.com"
+          target="_blank"
+          rel="noreferrer"
+          className="dispatch-link"
+        >
+          northlakedispatch.com ↗
+        </a>
         </div>
 
         <br />
