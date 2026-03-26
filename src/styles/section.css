@@ -122,50 +122,143 @@
 
 #experience li::before { display: none !important; }
 
-/* ── Projects ── */
+/* ══════════════════════════════ */
+/* PROJECT CARDS                 */
+/* ══════════════════════════════ */
+
 .automation-item {
-  margin-bottom: 2.5rem !important;
-  padding-bottom: 2.5rem !important;
-  border-bottom: 1px solid #f0ecfa !important;
+  margin-bottom: 1.5rem !important;
+  padding: 1.75rem !important;
+  border: 1px solid #e2ddf5 !important;
+  border-radius: 6px !important;
+  background: #faf8ff !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top accent bar on project cards */
+.automation-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c8b6ff 0%, rgba(200, 182, 255, 0.3) 100%);
+}
+
+.automation-item:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 32px rgba(200, 182, 255, 0.2) !important;
+  border-color: #c8b6ff !important;
 }
 
 .automation-item:last-child {
-  border-bottom: none !important;
   margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
 }
 
 .automation-item h3 {
-  font-size: 1.1rem !important;
-  font-weight: 500;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
   color: #2a2040 !important;
-  margin-bottom: 0.75rem !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: -0.1px;
 }
 
+/* ── Project label pills ── */
 .automation-list {
-  list-style-type: disc !important;
-  padding-left: 1.25rem !important;
-  margin: 0.75rem 0 !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0.5rem 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .automation-list li {
-  display: list-item !important;
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 0.5rem;
   border-bottom: none !important;
-  padding: 0.3rem 0 !important;
+  padding: 0 !important;
   margin-bottom: 0 !important;
   color: #6a6080 !important;
-  font-size: 0.93rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 
 .automation-list li::before { display: none !important; }
 
+/* Style the strong labels as pills */
+.automation-list li strong {
+  display: inline-block;
+  background: #ede8ff;
+  color: #5a4e7a !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
 .stack {
-  margin-top: 0.85rem !important;
-  font-size: 0.75rem !important;
+  display: inline-block;
+  margin-top: 1rem !important;
+  font-size: 0.72rem !important;
   color: #9d93b8 !important;
   font-family: 'DM Sans', sans-serif;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  background: #f3f0fa;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* ── Case study link ── */
+.case-study-trigger {
+  display: inline-block !important;
+  margin-top: 1.25rem !important;
+  background: #5a4e7a !important;
+  color: #faf7f2 !important;
+  border: none !important;
+  padding: 0.55rem 1.25rem !important;
+  border-radius: 3px !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: background 0.2s !important;
+}
+
+.case-study-trigger:hover {
+  background: #c8b6ff !important;
+  color: #2a2040 !important;
+}
+
+/* ── dispatch link ── */
+.dispatch-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 0.75rem;
+  font-size: 0.78rem;
+  font-family: 'DM Sans', sans-serif;
+  color: #9d93b8;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(200, 182, 255, 0.4);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.dispatch-link:hover {
+  color: #5a4e7a;
+  border-bottom-color: #5a4e7a;
 }
 
 /* ── 480px ── */
@@ -177,12 +270,14 @@
 @media (min-width: 768px) {
   .section { padding: 3rem 2.5rem 3rem 3rem !important; margin-bottom: 1.5rem !important; }
   .section h2 { font-size: 1.75rem !important; }
+  .automation-item { padding: 2rem !important; }
 }
 
 /* ── 1024px ── */
 @media (min-width: 1024px) {
   .section { padding: 3.5rem 3rem 3.5rem 3.5rem !important; margin-bottom: 1.75rem !important; }
   .section h2 { font-size: 1.9rem !important; margin-bottom: 2rem !important; }
+  .automation-item { padding: 2.25rem !important; }
 }
 
 /* ── 1440px ── */
