@@ -3,16 +3,17 @@
 /* ============================= */
 
 .section {
-  background: #22221f;
+  background: #ffffff;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid #ddd8ce;
   margin-bottom: 1.25rem;
   padding: 2.5rem 1.5rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
-  border-color: rgba(58, 107, 122, 0.3);
+  border-color: #c8b6ff;
+  box-shadow: 0 4px 20px rgba(200, 182, 255, 0.1);
 }
 
 /* ── 480px ── */
@@ -25,7 +26,6 @@
   .section {
     padding: 3.25rem 2.5rem;
     margin-bottom: 1.5rem;
-    border-radius: 6px;
   }
 }
 
