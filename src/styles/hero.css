@@ -4,9 +4,9 @@
 
 .hero {
   background:
-    radial-gradient(ellipse 80% 60% at 60% 80%, rgba(58, 107, 122, 0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 50% at 20% 40%, rgba(45, 74, 62, 0.14) 0%, transparent 70%),
-    linear-gradient(160deg, #1e3329 0%, #2d4a3e 45%, #3a6b7a 100%);
+    radial-gradient(ellipse 80% 60% at 65% 75%, rgba(122, 110, 154, 0.25) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 50% at 15% 40%, rgba(200, 182, 255, 0.15) 0%, transparent 65%),
+    linear-gradient(155deg, #3d3356 0%, #5a4e7a 50%, #7a6e9a 100%);
   padding: 72px 24px 80px;
   text-align: center;
   border-radius: 4px;
@@ -14,14 +14,13 @@
   overflow: hidden;
 }
 
-/* Topographic texture overlay */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cellipse cx='250' cy='250' rx='240' ry='170' fill='none' stroke='white' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Cellipse cx='250' cy='250' rx='200' ry='135' fill='none' stroke='white' stroke-width='0.6' stroke-opacity='0.05'/%3E%3Cellipse cx='250' cy='250' rx='160' ry='100' fill='none' stroke='white' stroke-width='0.6' stroke-opacity='0.045'/%3E%3Cellipse cx='250' cy='250' rx='120' ry='68' fill='none' stroke='white' stroke-width='0.6' stroke-opacity='0.04'/%3E%3Cellipse cx='250' cy='250' rx='80' ry='38' fill='none' stroke='white' stroke-width='0.6' stroke-opacity='0.035'/%3E%3C/svg%3E");
-  background-size: 420px;
-  background-position: 75% 55%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cellipse cx='250' cy='250' rx='240' ry='170' fill='none' stroke='white' stroke-width='0.7' stroke-opacity='0.07'/%3E%3Cellipse cx='250' cy='250' rx='195' ry='130' fill='none' stroke='white' stroke-width='0.7' stroke-opacity='0.055'/%3E%3Cellipse cx='250' cy='250' rx='150' ry='92' fill='none' stroke='white' stroke-width='0.7' stroke-opacity='0.045'/%3E%3Cellipse cx='250' cy='250' rx='105' ry='58' fill='none' stroke='white' stroke-width='0.7' stroke-opacity='0.035'/%3E%3Cellipse cx='250' cy='250' rx='62' ry='28' fill='none' stroke='white' stroke-width='0.7' stroke-opacity='0.028'/%3E%3C/svg%3E");
+  background-size: 440px;
+  background-position: 72% 58%;
   background-repeat: no-repeat;
   pointer-events: none;
 }
@@ -31,7 +30,7 @@
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(250, 247, 242, 0.55);
+  color: rgba(200, 182, 255, 0.7);
   margin-bottom: 1.2rem !important;
   opacity: 1 !important;
   display: flex;
@@ -47,7 +46,7 @@
   display: block;
   width: 1.75rem;
   height: 1px;
-  background: rgba(250, 247, 242, 0.3);
+  background: rgba(200, 182, 255, 0.35);
 }
 
 .hero h1 {
@@ -67,7 +66,7 @@
 .hero-sub {
   font-size: 0.95rem !important;
   font-weight: 400 !important;
-  color: rgba(250, 247, 242, 0.72) !important;
+  color: rgba(250, 247, 242, 0.7) !important;
   opacity: 1 !important;
   max-width: 92%;
   margin: 0 auto 24px auto !important;
@@ -81,7 +80,7 @@
   letter-spacing: 0.14em !important;
   text-transform: uppercase;
   opacity: 1 !important;
-  color: rgba(250, 247, 242, 0.4) !important;
+  color: rgba(200, 182, 255, 0.5) !important;
   max-width: 95%;
   margin: 0 auto !important;
   line-height: 2 !important;
