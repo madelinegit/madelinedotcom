@@ -3,6 +3,7 @@
 /* ============================= */
 
 .hero {
+  margin-bottom: 2rem;
   background:
     radial-gradient(ellipse 80% 60% at 65% 75%, rgba(122, 110, 154, 0.25) 0%, transparent 65%),
     radial-gradient(ellipse 50% 50% at 15% 40%, rgba(200, 182, 255, 0.15) 0%, transparent 65%),
