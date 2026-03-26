@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Hero from "../components/Hero";
 import Section from "../components/Section";
 import CaseStudyModal from "../components/CaseStudyModal";
 import "../styles/consulting.css";
@@ -8,7 +9,7 @@ function Home() {
 
   return (
     <>
-      <br />
+      <Hero />
 
       {/* ── CAPABILITIES ── */}
       <Section id="capabilities" title="Capabilities">
@@ -122,8 +123,7 @@ function Home() {
           <ul className="automation-list">
             <li>
               <strong>Problem:</strong> Staffing decisions were reactive and
-              lacked structured visibility across high-volume service
-              operations.
+              lacked structured visibility across high-volume service operations.
             </li>
             <li>
               <strong>Solution:</strong> Built a CSV ingestion and analytics
