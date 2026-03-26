@@ -258,7 +258,7 @@ function Home() {
       <Section id="contact" title="Get in Touch">
         <p style={{ maxWidth: "520px", lineHeight: "1.8", marginBottom: "1.5rem" }}>
           Whether you have a half-formed idea about automating something in
-          your operation, a specific project you want to scope, or you just
+          your business, a specific project you want to scope, or you just
           want to talk through what is possible, I am happy to have that
           conversation.
         </p>
