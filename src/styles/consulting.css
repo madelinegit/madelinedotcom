@@ -4,20 +4,28 @@
 
 #consulting {
   background: linear-gradient(
-    160deg,
-    rgba(188, 177, 214, 0.18) 0%,
-    rgba(188, 177, 214, 0.06) 100%
-  );
-  border-radius: 6px;
-  padding: 56px 20px !important;
+    150deg,
+    #1e3329 0%,
+    #2d4a3e 60%,
+    #233d4d 100%
+  ) !important;
+  border-color: rgba(58, 107, 122, 0.25) !important;
+}
+
+#consulting h2 {
+  color: #faf7f2;
+}
+
+#consulting h2::after {
+  background: var(--amber) !important;
 }
 
 .consulting-intro {
   font-family: 'Playfair Display', serif;
   font-size: 0.97rem;
   font-style: italic;
-  color: #666;
-  line-height: 1.75;
+  color: rgba(250, 247, 242, 0.65);
+  line-height: 1.8;
   max-width: 100%;
   margin-bottom: 2rem;
 }
@@ -30,21 +38,22 @@
 }
 
 .consulting-card {
-  background: rgba(245, 245, 247, 0.85);
-  border: 1px solid rgba(200, 182, 255, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   padding: 1.25rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
 }
 
 .consulting-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(46, 46, 46, 0.08);
+  border-color: rgba(58, 107, 122, 0.5);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
 }
 
 .consulting-card-icon {
   font-size: 1.3rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.65rem;
   display: block;
 }
 
@@ -52,44 +61,43 @@
   font-family: 'Playfair Display', serif;
   font-size: 0.97rem;
   font-weight: 600;
-  color: #2e2e2e;
+  color: #faf7f2;
   margin-bottom: 0.45rem;
 }
 
 .consulting-card p {
   font-size: 0.85rem;
-  line-height: 1.65;
-  color: #777;
+  line-height: 1.68;
+  color: rgba(250, 247, 242, 0.55);
 }
 
 .consulting-cta {
   display: inline-block;
   margin-top: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #5a4e7a;
+  color: rgba(90, 138, 150, 0.9);
   text-decoration: none;
-  border-bottom: 1px solid rgba(200, 182, 255, 0.6);
+  border-bottom: 1px solid rgba(58, 107, 122, 0.4);
   padding-bottom: 2px;
+  font-family: 'DM Sans', sans-serif;
   transition: color 0.2s, border-color 0.2s;
 }
 
 .consulting-cta:hover {
-  color: #2e2e2e;
-  border-bottom-color: #2e2e2e;
+  color: #faf7f2;
+  border-bottom-color: #faf7f2;
 }
 
 /* ── 480px ── */
 @media (min-width: 480px) {
-  #consulting { padding: 64px 24px !important; }
   .consulting-intro { font-size: 1rem; }
 }
 
-/* ── 768px — 2 col grid ── */
+/* ── 768px ── */
 @media (min-width: 768px) {
-  #consulting { padding: 72px 32px !important; }
   .consulting-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.15rem;
@@ -102,9 +110,8 @@
   .consulting-card { padding: 1.4rem; }
 }
 
-/* ── 1024px — 3 col grid ── */
+/* ── 1024px ── */
 @media (min-width: 1024px) {
-  #consulting { padding: 80px 40px !important; }
   .consulting-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
@@ -118,11 +125,10 @@
   .consulting-card { padding: 1.5rem; }
   .consulting-card h3 { font-size: 1rem; }
   .consulting-card p { font-size: 0.87rem; }
-  .consulting-cta { font-size: 0.82rem; }
 }
 
 /* ── 1440px ── */
 @media (min-width: 1440px) {
-  #consulting { padding: 90px 48px !important; }
   .consulting-intro { font-size: 1.1rem; max-width: 660px; }
+  .consulting-card { padding: 1.65rem; }
 }
