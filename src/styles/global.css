@@ -1,5 +1,5 @@
 @import "./variables.css";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600&family=DM+Sans:wght@300;400;500&display=swap');
 
 * {
   margin: 0;
@@ -7,14 +7,12 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Playfair Display', serif;
-  background-color: var(--soft-gray);
-  color: var(--dark-charcoal);
+  background-color: var(--ink);
+  color: var(--cream);
   line-height: 1.6;
   font-weight: 400;
   letter-spacing: 0.2px;
@@ -29,18 +27,34 @@ section {
 h1 {
   font-size: 3rem;
   font-weight: 600;
-  letter-spacing: -0.5px;   /* keeps large serif elegant */
+  letter-spacing: -0.5px;
 }
 
 h2 {
   font-size: 2rem;
   margin-bottom: 30px;
   font-weight: 500;
+  color: var(--cream);
 }
 
-p {
-  color: var(--muted-text);
-  font-size: 1rem;
+h3 {
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+}
+
+p { color: var(--muted-text); font-size: 1rem; }
+
+/* ── Section cards ── */
+.section {
+  background: #22221f;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.section:hover {
+  border-color: rgba(58, 107, 122, 0.3);
 }
 
 .section ul {
@@ -51,38 +65,133 @@ p {
 
 .section li {
   margin-bottom: 1rem;
+  color: #a8a89e;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding-bottom: 1rem;
 }
 
-#experience h1,
-#experience h2,
-#experience h3,
-#experience p,
-#experience ul {
-  margin: 0;
+.section li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
+
+.section li strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+/* ── Experience / Education ── */
+#experience h1, #experience h2, #experience h3,
+#experience p, #experience ul { margin: 0; }
 
 #experience ul {
   padding-left: 1.2rem;
   margin-top: 0.6rem;
-}
-
-#experience li {
-  margin-bottom: 0.5rem;
-}
-
-#experience ul {
   list-style-position: inside;
   list-style-type: disc;
 }
 
+#experience li {
+  margin-bottom: 0.5rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  color: #a8a89e;
+}
 
-#automation .automation-list {
+.experience-item, .education-item {
+  margin-bottom: 2.75rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.experience-item:last-child,
+.education-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* ── Projects ── */
+#automation .automation-list,
+#projects .automation-list {
   list-style-type: disc;
   padding-left: 1.25rem;
   margin: 0.75rem 0;
 }
 
-#automation .automation-list li {
+#automation .automation-list li,
+#projects .automation-list li {
   margin-bottom: 0.5rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  color: #a8a89e;
 }
 
+.automation-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.automation-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.stack {
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--lake-light);
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* ── Case study trigger ── */
+.case-study-trigger {
+  display: inline-block;
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  padding: 0 0 2px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--lake-light);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(90, 138, 150, 0.4);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.case-study-trigger:hover {
+  color: var(--cream);
+  border-bottom-color: var(--cream);
+}
+
+/* ── Section accent line on h2 ── */
+.section h2 {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--lake);
+  border-radius: 1px;
+}
+
+/* ── Contact section ── */
+#contact a {
+  color: var(--lake-light);
+}
+
+#contact a:hover {
+  color: var(--cream);
+}
