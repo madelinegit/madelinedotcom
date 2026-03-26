@@ -6,7 +6,7 @@ function Hero() {
       <p className="hero-eyebrow">Madeline Gall</p>
       <h1>
         I build things that make
-        <br className="hero-br" /> operations actually work.
+        <br className="hero-br" /> operations work smoothly.
       </h1>
       <p className="hero-sub">
         I'm a developer and logistics coordinator who got tired of waiting
