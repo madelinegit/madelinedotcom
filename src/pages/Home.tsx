@@ -11,10 +11,10 @@ function Home() {
     <>
       <Hero />
 
-      {/* ── PROJECTS ── */}
+      {/* PROJECTS */}
       <Section id="projects" title="Recent Projects">
         <div className="automation-item">
-          <h3>Dispatch & Route Optimization Platform</h3>
+          <h3>Dispatch &amp; Route Optimization Platform</h3>
           <ul className="automation-list">
             <li>
               <strong>The problem:</strong> Scheduling 10+ field employees
@@ -43,8 +43,7 @@ function Home() {
             </li>
           </ul>
           <p className="stack">
-            <strong>Stack:</strong> Python, Flask, OR-Tools, OSRM, Leaflet,
-            SQLite, Railway
+            <strong>Stack:</strong> Python, Flask, OR-Tools, OSRM, Leaflet, SQLite, Railway
           </p>
           <button
             className="case-study-trigger"
@@ -63,7 +62,7 @@ function Home() {
         </div>
 
         <div className="automation-item">
-          <h3>Staffing Analytics & Forecasting Tool</h3>
+          <h3>Staffing Analytics &amp; Forecasting Tool</h3>
           <ul className="automation-list">
             <li>
               <strong>Problem:</strong> Staffing decisions were reactive and
@@ -84,13 +83,12 @@ function Home() {
             </li>
           </ul>
           <p className="stack">
-            <strong>Stack:</strong> Python, Pandas, Data Modeling, ReportLab,
-            Streamlit
+            <strong>Stack:</strong> Python, Pandas, Data Modeling, ReportLab, Streamlit
           </p>
         </div>
       </Section>
 
-      {/* ── CONSULTING ── */}
+      {/* CONSULTING */}
       <Section id="consulting" title="AI Consulting">
         <p className="consulting-intro">
           I help small businesses figure out what AI can actually do for their
@@ -100,7 +98,7 @@ function Home() {
         <div className="consulting-grid">
           <div className="consulting-card">
             <span className="consulting-card-icon">🧭</span>
-            <h3>AI Strategy & Scoping</h3>
+            <h3>AI Strategy &amp; Scoping</h3>
             <p>
               Not sure where to start? I'll map your operation, identify the
               highest-leverage automation opportunities, and give you a clear
@@ -119,7 +117,7 @@ function Home() {
           </div>
           <div className="consulting-card">
             <span className="consulting-card-icon">🤖</span>
-            <h3>LLM & Automation Integration</h3>
+            <h3>LLM &amp; Automation Integration</h3>
             <p>
               Connect AI to what you already have. Smart notifications,
               automated summaries, data extraction, decision support. Practical
@@ -132,7 +130,7 @@ function Home() {
         </a>
       </Section>
 
-      {/* ── CAPABILITIES ── */}
+      {/* CAPABILITIES */}
       <Section id="capabilities" title="Capabilities">
         <div className="capabilities-grid">
           <div className="capability-card">
@@ -163,25 +161,25 @@ function Home() {
         </div>
       </Section>
 
-      {/* ── TECH STACK ── */}
+      {/* TECH STACK */}
       <Section id="systems" title="Tech Stack">
         <ul>
           <li><strong>Frontend:</strong> React, TypeScript</li>
           <li><strong>Backend:</strong> Python (Flask), REST API Architecture</li>
           <li><strong>Databases:</strong> MySQL, SQLite, PostgreSQL</li>
-          <li><strong>Data & Reporting:</strong> Pandas, structured data pipelines, PDF generation (ReportLab)</li>
-          <li><strong>Cloud & Infrastructure:</strong> AWS (EC2, S3, IAM), Linux server configuration, Nginx fundamentals</li>
-          <li><strong>Containerization & CI/CD:</strong> Docker, GitHub Actions</li>
-          <li><strong>Integrations & APIs:</strong> REST APIs, Google Maps API, third-party SaaS integrations</li>
-          <li><strong>Performance & Optimization:</strong> Caching strategies (Redis fundamentals), production monitoring & debugging</li>
+          <li><strong>Data &amp; Reporting:</strong> Pandas, structured data pipelines, PDF generation (ReportLab)</li>
+          <li><strong>Cloud &amp; Infrastructure:</strong> AWS (EC2, S3, IAM), Linux server configuration, Nginx fundamentals</li>
+          <li><strong>Containerization &amp; CI/CD:</strong> Docker, GitHub Actions</li>
+          <li><strong>Integrations &amp; APIs:</strong> REST APIs, Google Maps API, third-party SaaS integrations</li>
+          <li><strong>Performance &amp; Optimization:</strong> Caching strategies (Redis fundamentals), production monitoring &amp; debugging</li>
           <li><strong>Dev Workflow:</strong> Git version control, environment configuration, structured deployment practices</li>
         </ul>
       </Section>
 
-      {/* ── EXPERIENCE ── */}
+      {/* EXPERIENCE */}
       <Section id="experience" title="Experience">
         <div className="experience-item">
-          <h3>Technical Product & Automation Lead</h3>
+          <h3>Technical Product &amp; Automation Lead</h3>
           <p><strong>Tahoe Getaways</strong> · Full-time · May 2024 – Present</p>
           <ul>
             <li>Architect and deliver internal automation systems (Python, SQL, Deployment) replacing manual operational workflows</li>
@@ -226,7 +224,7 @@ function Home() {
         </div>
       </Section>
 
-      {/* ── EDUCATION ── */}
+      {/* EDUCATION */}
       <Section id="education" title="Education">
         <div className="education-item">
           <h3>Coding Dojo</h3>
@@ -258,7 +256,7 @@ function Home() {
         </div>
       </Section>
 
-      {/* ── CONTACT ── */}
+      {/* CONTACT */}
       <Section id="contact" title="Get in Touch">
         <p style={{ maxWidth: "520px", lineHeight: "1.8", marginBottom: "1.5rem" }}>
           Whether you have a half-formed idea about automating something in
@@ -271,7 +269,7 @@ function Home() {
         </a>
       </Section>
 
-      {/* ── MODAL ── */}
+      {/* MODAL */}
       {showCaseStudy && (
         <CaseStudyModal onClose={() => setShowCaseStudy(false)} />
       )}
