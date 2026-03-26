@@ -276,8 +276,8 @@ function Home() {
           want to talk through what's possible — I'm happy to have that
           conversation.
         </p>
-        <a href="mailto:hello@madelinegall.com" className="consulting-cta">
-          hello@madelinegall.com →
+        <a href="mailto:mgalldev@gmail.com" className="consulting-cta">
+          mgalldev@gmail.com →
         </a>
       </Section>
 
