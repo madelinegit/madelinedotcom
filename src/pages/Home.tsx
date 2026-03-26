@@ -9,71 +9,9 @@ function Home() {
 
   return (
     <>
-      <Hero />
-
-      {/* ── CAPABILITIES ── */}
-      <Section id="capabilities" title="Capabilities">
-        <ul>
-          <li>
-            <strong>Operational System Design:</strong> Architect automation
-            frameworks for high-volume service operations — the kind where a
-            missed stop has real consequences.
-          </li>
-          <li>
-            <strong>Process Optimization:</strong> Replace manual coordination
-            with structured, scalable internal platforms. I start with the
-            people problem, then build the software.
-          </li>
-          <li>
-            <strong>Data-Driven Planning:</strong> Translate operational data
-            into forecasting models and decision-support systems that actual
-            teams use day-to-day.
-          </li>
-          <li>
-            <strong>Platform Implementation:</strong> Design and deploy secure
-            internal systems integrating third-party services — built to last,
-            not just to demo.
-          </li>
-          <li>
-            <strong>End-to-End Delivery:</strong> Technical scoping through
-            rollout and adoption. I stay until the thing actually works.
-          </li>
-        </ul>
-      </Section>
-
-      {/* ── TECH STACK ── */}
-      <Section id="systems" title="Tech Stack">
-        <ul>
-          <li><strong>Frontend:</strong> React, TypeScript</li>
-          <li><strong>Backend:</strong> Python (Flask), REST API Architecture</li>
-          <li><strong>Databases:</strong> MySQL, SQLite, PostgreSQL</li>
-          <li>
-            <strong>Data & Reporting:</strong> Pandas, structured data
-            pipelines, PDF generation (ReportLab)
-          </li>
-          <li>
-            <strong>Cloud & Infrastructure:</strong> AWS (EC2, S3, IAM), Linux
-            server configuration, Nginx fundamentals
-          </li>
-          <li>
-            <strong>Containerization & CI/CD:</strong> Docker, GitHub Actions
-          </li>
-          <li>
-            <strong>Integrations & APIs:</strong> REST APIs, Google Maps API,
-            third-party SaaS integrations
-          </li>
-          <li>
-            <strong>Performance & Optimization:</strong> Caching strategies
-            (Redis fundamentals), production monitoring & debugging
-          </li>
-          <li>
-            <strong>Dev Workflow:</strong> Git version control, environment
-            configuration, structured deployment practices
-          </li>
-        </ul>
-      </Section>
-
-      {/* ── PROJECTS ── */}
+      <Hero /> </>br>
+    
+            {/* ── PROJECTS ── */}
       <Section id="projects" title="Recent Projects">
         <div className="automation-item">
           <h3>Dispatch & Route Optimization Platform</h3>
@@ -203,6 +141,82 @@ function Home() {
         </a>
       </Section>
 
+      {/* ── CONTACT ── */}
+      <Section id="contact" title="Get in Touch">
+        <p style={{ maxWidth: "520px", lineHeight: "1.8", marginBottom: "1.5rem" }}>
+          Whether you have a half-formed idea about automating something in
+          your operation, a specific project you want to scope, or you just
+          want to talk through what's possible — I'm happy to have that
+          conversation.
+        </p>
+        <a href="mailto:mgalldev@gmail.com" className="consulting-cta">
+          mgalldev@gmail.com →
+        </a>
+      </Section>
+      
+{/* ── CAPABILITIES ── */}
+<Section id="capabilities" title="Capabilities">
+  <div className="capabilities-grid">
+    <div className="capability-card">
+      <span className="capability-icon">⚙️</span>
+      <h3>Operational System Design</h3>
+      <p>Architect automation frameworks for high-volume service operations — the kind where a missed stop has real consequences.</p>
+    </div>
+    <div className="capability-card">
+      <span className="capability-icon">🔁</span>
+      <h3>Process Optimization</h3>
+      <p>Replace manual coordination with structured, scalable internal platforms. I start with the people problem, then build the software.</p>
+    </div>
+    <div className="capability-card">
+      <span className="capability-icon">📊</span>
+      <h3>Data-Driven Planning</h3>
+      <p>Translate operational data into forecasting models and decision-support systems that actual teams use day-to-day.</p>
+    </div>
+    <div className="capability-card">
+      <span className="capability-icon">🚀</span>
+      <h3>Platform Implementation</h3>
+      <p>Design and deploy secure internal systems integrating third-party services — built to last, not just to demo.</p>
+    </div>
+    <div className="capability-card">
+      <span className="capability-icon">🎯</span>
+      <h3>End-to-End Delivery</h3>
+      <p>Technical scoping through rollout and adoption. I stay until the thing actually works.</p>
+    </div>
+  </div>
+</Section>
+      {/* ── TECH STACK ── */}
+      <Section id="systems" title="Tech Stack">
+        <ul>
+          <li><strong>Frontend:</strong> React, TypeScript</li>
+          <li><strong>Backend:</strong> Python (Flask), REST API Architecture</li>
+          <li><strong>Databases:</strong> MySQL, SQLite, PostgreSQL</li>
+          <li>
+            <strong>Data & Reporting:</strong> Pandas, structured data
+            pipelines, PDF generation (ReportLab)
+          </li>
+          <li>
+            <strong>Cloud & Infrastructure:</strong> AWS (EC2, S3, IAM), Linux
+            server configuration, Nginx fundamentals
+          </li>
+          <li>
+            <strong>Containerization & CI/CD:</strong> Docker, GitHub Actions
+          </li>
+          <li>
+            <strong>Integrations & APIs:</strong> REST APIs, Google Maps API,
+            third-party SaaS integrations
+          </li>
+          <li>
+            <strong>Performance & Optimization:</strong> Caching strategies
+            (Redis fundamentals), production monitoring & debugging
+          </li>
+          <li>
+            <strong>Dev Workflow:</strong> Git version control, environment
+            configuration, structured deployment practices
+          </li>
+        </ul>
+      </Section>
+
+
       {/* ── EXPERIENCE ── */}
       <Section id="experience" title="Experience">
         <div className="experience-item">
@@ -283,18 +297,6 @@ function Home() {
         </div>
       </Section>
 
-      {/* ── CONTACT ── */}
-      <Section id="contact" title="Get in Touch">
-        <p style={{ maxWidth: "520px", lineHeight: "1.8", marginBottom: "1.5rem" }}>
-          Whether you have a half-formed idea about automating something in
-          your operation, a specific project you want to scope, or you just
-          want to talk through what's possible — I'm happy to have that
-          conversation.
-        </p>
-        <a href="mailto:mgalldev@gmail.com" className="consulting-cta">
-          mgalldev@gmail.com →
-        </a>
-      </Section>
 
       {/* ── MODAL ── */}
       {showCaseStudy && (
