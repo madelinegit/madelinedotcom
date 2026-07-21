@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Setup sheet contains secrets — never commit
+Blog-Admin-Setup.pdf
