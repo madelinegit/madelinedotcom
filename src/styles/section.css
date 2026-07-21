@@ -174,10 +174,14 @@
   gap: 0.6rem;
 }
 
+/* Grid, not flex: the labels differ in width ("The gap" vs "What I built"),
+   so a flex row starts each paragraph at a different x-position and the left
+   edge of the copy goes ragged. A fixed label column keeps every line of body
+   text aligned at any viewport width. Stacks below 720px. */
 .automation-list li {
-  display: flex !important;
-  align-items: baseline !important;
-  gap: 0.5rem;
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
   border-bottom: none !important;
   padding: 0 !important;
   margin-bottom: 0 !important;
@@ -186,11 +190,25 @@
   line-height: 1.65;
 }
 
+@media (min-width: 720px) {
+  .automation-list li {
+    grid-template-columns: 8.5rem 1fr;
+    gap: 0.85rem;
+    align-items: baseline;
+  }
+  .automation-list li > span { grid-column: 2; }
+  /* A point with no label should use the full width, not sit in the copy
+     column with an empty gutter beside it. */
+  .automation-list li.is-unlabelled > span { grid-column: 1 / -1; }
+}
+
 .automation-list li::before { display: none !important; }
 
 /* Style the strong labels as pills */
 .automation-list li strong {
-  display: inline-block;
+  /* justify-self keeps the pill hugging its text instead of stretching to
+     fill the whole label column. */
+  justify-self: start;
   background: #ede8ff;
   color: #5a4e7a !important;
   font-size: 0.7rem !important;
@@ -200,8 +218,26 @@
   padding: 0.2rem 0.6rem;
   border-radius: 20px;
   white-space: nowrap;
-  flex-shrink: 0;
   font-family: 'DM Sans', sans-serif;
+}
+
+/* One flex row for the stack pill, case-study button and external link. They
+   previously carried three different margin-tops, so they sat on mismatched
+   baselines and wrapped unpredictably as the viewport narrowed. */
+.project-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.project-footer .stack,
+.project-footer .case-study-trigger,
+.project-footer .dispatch-link {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .stack {

@@ -83,8 +83,7 @@ export const education: Credential[] = [
   {
     institution: "Ohio University",
     award: "Bachelor of Science, Anthropology",
-    detail:
-      "Associate of Science, Information Technology · Certificate in Strategic Business Leadership",
+    detail: "Associate of Science, Information Technology",
     year: "2014",
   },
 ];
@@ -126,5 +125,10 @@ export const stack: StackGroup[] = [
   {
     label: "Performance",
     items: "Redis caching, production monitoring and debugging",
+  },
+  {
+    label: "Security & Practice",
+    items:
+      "Authentication, SSL, PII handling, Git version control, environment management, structured deployment",
   },
 ];

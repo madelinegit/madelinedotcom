@@ -331,11 +331,32 @@
 .post-body li { margin-bottom: 0.6rem; }
 .post-body li::marker { color: #c8b6ff; }
 
+/* Blockquotes in posts render as set-aside callouts — a tinted panel rather
+   than a pull quote, since in this writing they carry digressions ("Sidebar:
+   no, prompt caching isn't memory") rather than quoted speech. */
 .post-body blockquote {
-  border-left: 2px solid #c8b6ff;
-  padding-left: 1.25rem;
-  font-style: italic;
-  color: #6a7a72;
+  background: #f7f4ff;
+  border: 1px solid #e4dcff;
+  border-left: 3px solid #c8b6ff;
+  border-radius: 3px;
+  padding: 1.15rem 1.35rem;
+  color: #55496f;
+  font-size: 0.99rem;
+}
+
+.post-body blockquote > * + * { margin-top: 0.85rem; }
+
+.post-body blockquote p { color: inherit; font-size: inherit; }
+
+/* Leading bold line acts as the callout's title. */
+.post-body blockquote p:first-child strong {
+  display: block;
+  color: #453a5f;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
 
 .post-body code {

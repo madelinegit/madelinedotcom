@@ -10,7 +10,7 @@ export const site = {
     "Technical Product Manager and full-stack developer. I build operational software that ships — dispatch platforms, AI integrations, and internal tools that hold up in the real world.",
   hero: {
     headline: ["I build things that make", "operations work smoothly."],
-    sub: "Technical Product Manager and full-stack developer. I got tired of waiting for the right software to exist, so I started building it — custom platforms, AI integrations, and systems that hold up in the real world.",
+    sub: "Technical Product Manager and full-stack developer. When the right software doesn't exist, build it — custom platforms, AI integrations, and systems that hold up in the real world.",
     tags: ["PRODUCT MANAGEMENT", "SOFTWARE ENGINEERING", "OPERATIONS AUTOMATION", "AI CONSULTING"],
   },
 } as const;

@@ -83,8 +83,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  column-gap: 0.75rem;
-  row-gap: 0.25rem;
+  column-gap: 1.5rem;
+  row-gap: 0.15rem;
   font-size: 0.65rem !important;
   letter-spacing: 0.14em !important;
   text-transform: uppercase;
@@ -96,13 +96,11 @@
   position: relative;
 }
 
-/* Separator rides on the preceding tag, so a wrap leaves it trailing the line
-   rather than leading the next one. */
-.hero-tag:not(:last-child)::after {
-  content: ' ·';
-  margin-left: 0.75rem;
-  color: rgba(200, 182, 255, 0.32);
-}
+/* No separators by default. When the list wraps, a middot stranded at the end
+   of a line reads as a mistake, so the dots only appear at widths where all
+   four tags fit on a single row (see the 1100px query below). Until then the
+   flex gap does the separating. */
+.hero-tag::after { content: none; }
 
 /* ── 480px ── */
 @media (min-width: 480px) {
@@ -164,10 +162,22 @@
   }
 }
 
+/* ── 1100px ──
+   Only here is there room for all four tags on one row, so this is where the
+   middot separators come back. */
+@media (min-width: 1100px) {
+  .hero-tags { max-width: 940px; column-gap: 0.9rem; }
+  .hero-tag:not(:last-child)::after {
+    content: '·';
+    margin-left: 0.9rem;
+    color: rgba(200, 182, 255, 0.32);
+  }
+}
+
 /* ── 1440px ── */
 @media (min-width: 1440px) {
   .hero { padding: 150px 24px 165px; }
   .hero h1 { font-size: 3.9rem; max-width: 1000px; letter-spacing: -0.8px; }
   .hero-sub { font-size: 1.28rem !important; max-width: 650px; }
-  .hero-tags { font-size: 0.88rem !important; max-width: 860px; }
+  .hero-tags { font-size: 0.88rem !important; max-width: 1020px; }
 }

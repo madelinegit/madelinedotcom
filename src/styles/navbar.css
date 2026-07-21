@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding: 1rem 1.25rem;
   background: rgba(245, 240, 232, 0.82);
   backdrop-filter: blur(14px);
@@ -31,6 +32,9 @@
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: color 0.2s;
+  /* Never let the wordmark break across two lines and grow the bar. */
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .navbar-name:hover { color: #7a6e9a; }
@@ -114,6 +118,7 @@
   color: #7a8a82;
   text-decoration: none;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .navbar-links a:hover { color: #1e2e26; }
@@ -124,6 +129,7 @@
   padding: 0.4rem 0.9rem;
   border-radius: 2px;
   letter-spacing: 0.08em !important;
+  white-space: nowrap;
 }
 
 .navbar-cta:hover {
@@ -143,13 +149,22 @@ body { padding-top: 60px; }
 /* ── 768px ── */
 @media (min-width: 768px) {
   .navbar { padding: 1.1rem 2rem; }
+  body { padding-top: 64px; }
+}
+
+/* ── 1000px ──
+   The horizontal nav only appears once there is genuinely room for six items
+   plus the wordmark. Below this the hamburger stays, which is why the
+   breakpoint is 1000px and not the usual 768px. */
+@media (min-width: 1000px) {
   .navbar-toggle { display: none; }
   .navbar-links,
   .navbar-links--open {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1.75rem;
+    flex-wrap: nowrap;
+    gap: clamp(0.9rem, 2vw, 2rem);
     position: static;
     padding: 0;
     background: none;
@@ -159,13 +174,11 @@ body { padding-top: 60px; }
     -webkit-backdrop-filter: none;
   }
   .navbar-links--open a { font-size: 0.72rem; }
-  body { padding-top: 64px; }
 }
 
 /* ── 1024px ── */
 @media (min-width: 1024px) {
   .navbar { padding: 1.1rem 2.5rem; }
-  .navbar-links { gap: 2rem; }
   .navbar-links a { font-size: 0.78rem; }
 }
 

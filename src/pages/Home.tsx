@@ -33,29 +33,36 @@ function Home() {
             <p className="project-tagline">{project.tagline}</p>
             <ul className="automation-list">
               {project.points.map((point) => (
-                <li key={point.label ?? point.text}>
-                  {point.label && <strong>{point.label}:</strong>} {point.text}
+                <li
+                  key={point.label ?? point.text}
+                  className={point.label ? undefined : "is-unlabelled"}
+                >
+                  {point.label && <strong>{point.label}:</strong>}
+                  <span>{point.text}</span>
                 </li>
               ))}
             </ul>
-            <p className="stack">
-              <strong>Stack:</strong> {project.stack.join(", ")}
-            </p>
-            {project.hasCaseStudy && (
-              <button className="case-study-trigger" onClick={() => setCaseStudyOpen(true)}>
-                Read the full case study
-              </button>
-            )}
-            {project.link && (
-              <a
-                href={project.link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="dispatch-link"
-              >
-                {project.link.label}
-              </a>
-            )}
+
+            <div className="project-footer">
+              <span className="stack">
+                <strong>Stack:</strong> {project.stack.join(", ")}
+              </span>
+              {project.hasCaseStudy && (
+                <button className="case-study-trigger" onClick={() => setCaseStudyOpen(true)}>
+                  Read the full case study
+                </button>
+              )}
+              {project.link && (
+                <a
+                  href={project.link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="dispatch-link"
+                >
+                  {project.link.label}
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </Section>

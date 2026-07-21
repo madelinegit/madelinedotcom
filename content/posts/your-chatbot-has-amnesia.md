@@ -26,7 +26,9 @@ Each one has trade-offs that an AI PM should understand:
 
 **Structured fact extraction.** Pull discrete facts — "user's dog is Biscuit" — into a profile you inject every time. Compact, auditable, and users can literally see and correct it. The cost: the extraction pipeline is now its own product, with its own bugs.
 
-**Sidebar: no, prompt caching isn't memory.** This honestly confused me at first. Prompt caching stores a repeated prompt *prefix* server-side so your calls get cheaper and faster. It expires in minutes and remembers nothing about your user. It makes whatever memory architecture you chose cheaper to run — it isn't one. If someone suggests "let's just use caching for memory," the architecture conversation hasn't happened yet.
+> **Sidebar: no, prompt caching isn't memory.**
+>
+> This honestly confused me at first. Prompt caching stores a repeated prompt *prefix* server-side so your calls get cheaper and faster. It expires in minutes and remembers nothing about your user. It makes whatever memory architecture you chose cheaper to run — it isn't one. If someone suggests "let's just use caching for memory," the architecture conversation hasn't happened yet.
 
 ## What I actually chose (three times, three answers)
 
