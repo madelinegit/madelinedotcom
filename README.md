@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# madelinegall.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio and writing site. React 19 + TypeScript + Vite, deployed on Vercel.
 
-Currently, two official plugins are available:
+## Running locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev        # site at http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The `/admin` editor calls serverless functions that only exist on Vercel. To run
+those locally:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm i -g vercel
+vercel dev         # site + API at http://localhost:3000
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Structure
+
+```
+content/posts/     Blog posts as markdown. One file per post.
+api/               Vercel serverless functions (auth + post CRUD).
+src/data/          Résumé, projects, and site copy. Edit content here, not in JSX.
+src/lib/           Markdown loading (posts.ts) and admin API client.
+src/pages/         Home, Blog, BlogPost, Admin, NotFound.
+src/components/    Shared UI.
+src/styles/        One stylesheet per area. Tokens in variables.css.
+```
+
+### Editing site content
+
+All résumé and project copy lives in `src/data/`. `src/data/resume.ts` is the
+source of truth for employment dates and is kept in sync with the current
+résumé — update it there and every page follows.
+
+## Blog
+
+Posts are markdown files in `content/posts/`, loaded at build time by
+`src/lib/posts.ts`. There is no database.
+
+Frontmatter:
+
+```yaml
+---
+title: 'Your Chatbot Has Amnesia'
+date: 2026-07-20
+excerpt: 'Shown on the blog index and in link previews.'
+tags: [AI, product management]
+published: true      # false keeps it out of the public build
+---
+```
+
+You can write posts either way:
+
+- **In the browser** — sign in at `/admin`, write, hit Save. The serverless
+  function commits the markdown file to this repo, which triggers a Vercel
+  rebuild. The post is live in roughly 30 seconds.
+- **In your editor** — add a `.md` file to `content/posts/` and push.
+
+Both paths produce identical results because the browser editor is just
+committing the same files.
+
+## Environment variables
+
+Set these in **Vercel → Project → Settings → Environment Variables** for all
+environments. The `/admin` editor returns 500s until they exist.
+
+| Variable | Purpose |
+| --- | --- |
+| `ADMIN_PASSWORD` | The password for `/admin`. Use a long random string. |
+| `SESSION_SECRET` | Random 32+ byte string used to sign the session cookie. |
+| `GITHUB_TOKEN` | Fine-grained PAT with **Contents: read and write** on this repo only. |
+| `GITHUB_REPO` | Optional. Defaults to `madelinegit/madelinedotcom`. |
+| `GITHUB_BRANCH` | Optional. Defaults to `main`. |
+
+Generate the two secrets with:
+
+```bash
+openssl rand -base64 32
+```
+
+### Security notes
+
+- The password is verified server-side only. It is never sent to the browser
+  and never appears in the bundle.
+- The session is an HMAC-signed, `HttpOnly`, `Secure`, `SameSite=Strict` cookie
+  that expires after 12 hours.
+- The GitHub token should be **fine-grained** and scoped to this repository with
+  contents write access — nothing else. If it ever leaks, the blast radius is
+  this repo.
+- Rotate `SESSION_SECRET` to invalidate every existing session immediately.
+
+## Scripts
+
+```bash
+npm run dev        # dev server
+npm run build      # typecheck + production build
+npm run preview    # serve the production build
+npm run lint       # eslint
 ```

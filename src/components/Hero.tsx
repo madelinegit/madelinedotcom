@@ -1,21 +1,26 @@
+import { Fragment } from "react";
+import { site } from "../data/site";
 import "../styles/hero.css";
 
 function Hero() {
   return (
     <section className="hero">
-      <p className="hero-eyebrow">Madeline Gall</p>
+      <p className="hero-eyebrow">{site.name}</p>
       <h1>
-        I build things that make
-        <br className="hero-br" /> operations work smoothly.
+        {site.hero.headline.map((line, index) => (
+          <Fragment key={line}>
+            {index > 0 && <br className="hero-br" />}
+            {line}
+          </Fragment>
+        ))}
       </h1>
-      <p className="hero-sub">
-        I'm a developer and logistics coordinator who got tired of waiting
-        for the right software to exist — so I started building it. Custom
-        tools, AI integrations, and systems that hold up in the real world.
-      </p>
+      <p className="hero-sub">{site.hero.sub}</p>
       <p className="hero-tags">
-        SOFTWARE ENGINEERING&nbsp;&nbsp;·&nbsp;&nbsp;OPERATIONS
-        AUTOMATION&nbsp;&nbsp;·&nbsp;&nbsp;AI CONSULTING
+        {site.hero.tags.map((tag) => (
+          <span key={tag} className="hero-tag">
+            {tag}
+          </span>
+        ))}
       </p>
     </section>
   );

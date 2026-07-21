@@ -1,22 +1,45 @@
+/*
+  Design tokens.
+
+  Note: much of the existing CSS still hardcodes these hex values inline rather
+  than referencing the tokens. The values below are the real palette in use —
+  keep them in sync when changing colors, and prefer var() in new rules.
+*/
 :root {
-  --pine:             #5a4e7a;
-  --pine-dark:        #3d3356;
-  --lake:             #7a6e9a;
-  --lake-light:       #9d93b8;
-  --lavender:         #c8b6ff;
-  --lavender-muted:   #7a6e9a;
-  --cream:            #faf7f2;
-  --parchment:        #f5f0e8;
-  --ink:              #2a2040;
-  --muted-text:       #6a6080;
-  --rule:             #ddd8ce;
+  /* Text */
+  --ink:              #1e2e26;  /* headings, strong text */
+  --body-text:        #5a6a62;  /* paragraph copy */
+  --muted-text:       #7a8a82;  /* meta, timestamps */
 
-  --primary-lavender: #c8b6ff;
+  /* Accent */
+  --accent:           #7a6e9a;  /* links, labels */
+  --lavender:         #c8b6ff;  /* rules, hover borders */
   --soft-lavender:    #e7ddff;
-  --warm-tan:         #d8c3a5;
-  --soft-gray:        #f5f0e8;
-  --dark-charcoal:    #2a2040;
+  --lavender-tint:    #f2edff;  /* tag and code backgrounds */
 
+  /* Surfaces */
+  --parchment:        #f5f0e8;  /* page background */
+  --surface:          #ffffff;  /* cards, sections */
+  --cream:            #faf7f2;
+
+  /* Hero gradient */
+  --pine-dark:        #3d3356;
+  --pine:            #5a4e7a;
+  --lake:             #7a6e9a;
+
+  /* Rules, lightest to darkest */
+  --rule-faint:       #f0ebe0;
+  --rule-light:       #ede8df;
+  --rule:             #e2ddd3;
+  --rule-strong:      #ddd8ce;
+
+  --dark-charcoal:    #2a2040;  /* footer */
+
+  /* Type */
+  --font-serif:       'Playfair Display', Georgia, serif;
+  --font-sans:        'DM Sans', system-ui, -apple-system, sans-serif;
+
+  /* Layout */
   --max-width:        1100px;
   --section-padding:  80px;
   --transition:       all 0.3s ease;

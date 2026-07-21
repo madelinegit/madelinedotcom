@@ -76,7 +76,15 @@
   position: relative;
 }
 
+/* Flex rather than inline text so the tag list wraps as balanced whole items
+   instead of orphaning the last one onto its own line. */
 .hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.75rem;
+  row-gap: 0.25rem;
   font-size: 0.65rem !important;
   letter-spacing: 0.14em !important;
   text-transform: uppercase;
@@ -86,6 +94,14 @@
   margin: 0 auto !important;
   line-height: 2 !important;
   position: relative;
+}
+
+/* Separator rides on the preceding tag, so a wrap leaves it trailing the line
+   rather than leading the next one. */
+.hero-tag:not(:last-child)::after {
+  content: ' ·';
+  margin-left: 0.75rem;
+  color: rgba(200, 182, 255, 0.32);
 }
 
 /* ── 480px ── */

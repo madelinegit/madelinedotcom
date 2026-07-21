@@ -35,6 +35,48 @@
 
 .navbar-name:hover { color: #7a6e9a; }
 
+/* ── Mobile menu toggle (hidden from 768px up) ── */
+.navbar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: -0.5rem -0.5rem -0.5rem 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1e2e26;
+}
+
+.navbar-toggle-bars,
+.navbar-toggle-bars::before,
+.navbar-toggle-bars::after {
+  display: block;
+  width: 1.15rem;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.navbar-toggle-bars { position: relative; }
+
+.navbar-toggle-bars::before,
+.navbar-toggle-bars::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggle-bars::before { transform: translateY(-6px); }
+.navbar-toggle-bars::after  { transform: translateY(6px); }
+
+.navbar-toggle-bars.is-open { background: transparent; }
+.navbar-toggle-bars.is-open::before { transform: rotate(45deg); }
+.navbar-toggle-bars.is-open::after  { transform: rotate(-45deg); }
+
 .navbar-links {
   display: none;
   gap: 1.5rem;
@@ -42,6 +84,26 @@
   margin: 0;
   padding: 0;
 }
+
+/* Open state on mobile: drop the links into a panel under the bar. */
+.navbar-links--open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1.25rem 1.75rem;
+  background: rgba(245, 240, 232, 0.98);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(200, 182, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(30, 46, 38, 0.08);
+}
+
+.navbar-links--open a { font-size: 0.85rem; }
 
 .navbar-links a {
   font-family: 'Playfair Display', serif;
@@ -81,7 +143,22 @@ body { padding-top: 60px; }
 /* ── 768px ── */
 @media (min-width: 768px) {
   .navbar { padding: 1.1rem 2rem; }
-  .navbar-links { display: flex; gap: 1.75rem; }
+  .navbar-toggle { display: none; }
+  .navbar-links,
+  .navbar-links--open {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.75rem;
+    position: static;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .navbar-links--open a { font-size: 0.72rem; }
   body { padding-top: 64px; }
 }
 

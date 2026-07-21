@@ -205,7 +205,7 @@ function CaseStudyModal({ onClose }: Props) {
         <div className="modal-rule" />
 
         <p className="modal-byline">
-          Madeline Gall · Logistics Coordinator & Developer · Truckee, CA
+          Madeline Gall · Technical Product Manager · Truckee, CA
         </p>
       </article>
     </div>

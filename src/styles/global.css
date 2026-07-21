@@ -1,5 +1,6 @@
 @import "./variables.css";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600&family=DM+Sans:wght@300;400;500&display=swap');
+/* Fonts are loaded via <link> in index.html — an @import here would serialize
+   the request behind this stylesheet and delay first paint. */
 
 * {
   margin: 0;
@@ -8,6 +9,16 @@
 }
 
 html { scroll-behavior: smooth; }
+
+/* Keep the footer at the bottom of the viewport on short pages (404, a blog
+   index with only one or two posts) instead of leaving dead space below it. */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root > main { flex: 1; }
 
 body {
   font-family: 'Playfair Display', serif;
@@ -179,8 +190,69 @@ p { color: #5a6a62; font-size: 1rem; }
   border-bottom-color: #1e2e26;
 }
 
+/* ── Project tagline ── */
+.project-tagline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #9d93b8;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Experience meta line ── */
+.experience-line {
+  font-size: 0.92rem;
+  color: #7a8a82;
+  margin-bottom: 0.35rem !important;
+}
+
+.experience-line strong { color: #1e2e26; font-weight: 600; }
+
+/* ── Tech stack ── */
+.stack-list { margin: 0; }
+
+.stack-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #f0ebe0;
+}
+
+.stack-row:last-child { border-bottom: none; }
+
+.stack-row dt {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: #7a6e9a;
+}
+
+.stack-row dd {
+  margin: 0;
+  color: #5a6a62;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 720px) {
+  .stack-row {
+    grid-template-columns: 13rem 1fr;
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+}
+
 /* ── Contact ── */
+.contact-intro {
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
 #contact p { color: #5a6a62; }
 #contact a { color: #7a6e9a; }
-#contact a:hover { color: #1e2e26; }
 #contact a:hover { color: #1e2e26; }
