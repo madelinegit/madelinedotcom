@@ -83,7 +83,10 @@ export const education: Credential[] = [
   {
     institution: "Ohio University",
     award: "Bachelor of Science, Anthropology",
-    detail: "Associate of Science, Information Technology",
+    // Strategic Business Leadership is intentionally kept here even though it
+    // is absent from resume ATS9 — it is being added back to the resume.
+    detail:
+      "Associate of Science, Information Technology · Certificate in Strategic Business Leadership",
     year: "2014",
   },
 ];
