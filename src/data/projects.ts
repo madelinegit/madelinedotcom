@@ -51,19 +51,23 @@ export const projects: Project[] = [
   {
     slug: "staffing-analytics",
     name: "Staffing Analytics & Forecasting Tool",
-    tagline: "Labor forecasting from raw service data",
+    tagline: "A year of performance data against booking and seasonal demand",
     points: [
       {
         label: "The problem",
-        text: "Staffing decisions were reactive and lacked structured visibility across high-volume service operations.",
+        text: "Leadership was divided on staffing, and every position was argued from anecdote. Without a shared picture of how the team actually performed across a full season cycle, the same disagreements resurfaced every quarter and nobody could settle them.",
+      },
+      {
+        label: "The gap",
+        text: "Performance data, booking volume, and seasonal demand each lived in a separate system. Nobody had ever put them side by side, so a busy month and a productive month were indistinguishable.",
       },
       {
         label: "What I built",
-        text: "A CSV ingestion and analytics pipeline evaluating service volume, workload distribution, and labor allocation patterns, with automated PDF report generation for leadership review.",
+        text: "An ingestion and analytics pipeline tracking individual employee performance across a full year on multiple metrics, joined against booking data and the seasonal factors that actually drive workload — holiday peaks, shoulder seasons, and storm cycles. Findings are compiled into automated PDF reports written for leadership review.",
       },
       {
         label: "Impact",
-        text: "Replaced roughly 80 hours per week of manual staffing analysis and enabled proactive labor forecasting.",
+        text: "Gave a divided leadership team one shared, evidence-based picture to argue from. Staffing decisions moved from competing impressions to grounded strategy, and labor forecasting became a function of real seasonal demand rather than the previous month's gut feel.",
       },
     ],
     stack: ["Python", "Pandas", "ReportLab", "Streamlit"],
