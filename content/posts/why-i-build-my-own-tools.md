@@ -1,16 +1,14 @@
 ---
-title: Why I Build My Own Tools
+title: 'Why I Build My Own Tools'
 date: 2026-07-12
-excerpt: The software market is very good at solving the average version of your problem. Operations is where the average version stops being useful.
-tags: [operations, product, tooling]
+excerpt: 'The software market is very good at solving the average version of your problem. Operations is where the average version stops being useful.'
+tags: ['operations', 'product', 'tooling']
 published: true
 ---
 
 There is a moment in every operations job where you realize the tool you are using was designed for a company that is not yours.
 
-It happened to me on a Tuesday. I was looking at two platforms — both good, both expensive, both doing exactly what they promised — and neither could answer the only question that mattered that morning: *in what order should these ten people visit these forty properties?*
-
-Both tools tracked tasks beautifully. Neither had any concept of a route.
+I was looking at two platforms — both good, both charging a monthly fee the size of most of our admins' paychecks. Both tools tracked tasks beautifully but neither had any concept of a route. And neither could answer the only question that mattered at 8AM every morning: *in what order should these ten people visit these forty properties?*
 
 ## The gap is usually not a feature gap
 
