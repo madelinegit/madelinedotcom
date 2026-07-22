@@ -15,11 +15,10 @@ function Blog() {
       />
 
       <header className="blog-header">
-        <p className="blog-eyebrow">Writing</p>
-        <h1 className="blog-title">Notes from building the thing</h1>
+        <h1 className="blog-title">Writing</h1>
         <p className="blog-intro">
-          Essays on product decisions, operational software, and the parts of building AI
-          systems that only show up once real people are using them.
+          Product decisions, operational software, and what AI systems do once real people
+          use them.
         </p>
       </header>
 
