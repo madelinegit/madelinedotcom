@@ -14,12 +14,11 @@ function Blog() {
         path="/blog"
       />
 
+      {/* No subtitle by design: the featured post's excerpt sits an inch below
+          and already says what the writing covers. The Meta description above
+          still gives search results something to show. */}
       <header className="blog-header">
         <h1 className="blog-title">The Product Blog</h1>
-        <p className="blog-intro">
-          Product decisions, operational software, and what AI systems do once real people
-          use them.
-        </p>
       </header>
 
       {!featured && (

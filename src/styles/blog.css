@@ -52,6 +52,10 @@
   margin-bottom: clamp(2.25rem, 5vw, 3rem);
 }
 
+/* With no subtitle following it, the title's own bottom margin would stack on
+   top of the header padding and push the rule too far down. */
+.blog-header .blog-title:last-child { margin-bottom: 0; }
+
 .blog-empty {
   font-style: italic;
   color: #7a8a82;
