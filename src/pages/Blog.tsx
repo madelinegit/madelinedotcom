@@ -15,7 +15,9 @@ function Blog() {
       />
 
       <header className="blog-header">
-        <h1 className="blog-title">Writing</h1>
+        {/* Kept for the document outline and search results, hidden visually:
+            the nav already says Writing, so on screen it was just repetition. */}
+        <h1 className="visually-hidden">Writing</h1>
         <p className="blog-intro">
           Product decisions, operational software, and what AI systems do once real people
           use them.
