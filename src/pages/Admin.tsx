@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -38,6 +38,7 @@ function Admin() {
   /** Slug the draft was loaded from; empty for a new post. */
   const [editingSlug, setEditingSlug] = useState("");
   const [slugTouched, setSlugTouched] = useState(false);
+  const bodyRef = useRef<HTMLTextAreaElement>(null);
   const [saving, setSaving] = useState(false);
   const [preview, setPreview] = useState(false);
 
@@ -104,6 +105,66 @@ function Admin() {
 
   function update<K extends keyof PostDraft>(key: K, value: PostDraft[K]) {
     setDraft((current) => (current ? { ...current, [key]: value } : current));
+  }
+
+  /**
+   * Wraps (or unwraps) the current selection in a Markdown marker, so Cmd-B
+   * and Cmd-I behave the way they do in every other editor. Pressing the same
+   * shortcut on already-wrapped text removes the markers rather than nesting
+   * a second pair.
+   */
+  function wrapSelection(marker: string) {
+    const field = bodyRef.current;
+    if (!field) return;
+
+    const { selectionStart: start, selectionEnd: end, value } = field;
+    const before = value.slice(0, start);
+    const after = value.slice(end);
+    const wrapped = before.endsWith(marker) && after.startsWith(marker);
+
+    const next = wrapped
+      ? before.slice(0, -marker.length) + value.slice(start, end) + after.slice(marker.length)
+      : `${before}${marker}${value.slice(start, end)}${marker}${after}`;
+
+    update("body", next);
+
+    // Keep the same text selected once React has re-rendered the textarea.
+    const shift = wrapped ? -marker.length : marker.length;
+    requestAnimationFrame(() => {
+      field.focus();
+      field.setSelectionRange(start + shift, end + shift);
+    });
+  }
+
+  /** Adds (or removes) a line-start marker such as "## " or "> ". */
+  function prefixLine(marker: string) {
+    const field = bodyRef.current;
+    if (!field) return;
+
+    const { selectionStart: caret, value } = field;
+    const lineStart = value.lastIndexOf("\n", caret - 1) + 1;
+    const line = value.slice(lineStart);
+    const present = line.startsWith(marker);
+
+    const next = present
+      ? value.slice(0, lineStart) + line.slice(marker.length)
+      : value.slice(0, lineStart) + marker + line;
+
+    update("body", next);
+
+    const shift = present ? -marker.length : marker.length;
+    requestAnimationFrame(() => {
+      field.focus();
+      field.setSelectionRange(caret + shift, caret + shift);
+    });
+  }
+
+  function handleBodyKeys(e: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (!(e.metaKey || e.ctrlKey) || e.altKey) return;
+    const key = e.key.toLowerCase();
+    if (key !== "b" && key !== "i") return;
+    e.preventDefault();
+    wrapSelection(key === "b" ? "**" : "*");
   }
 
   // Until the slug is edited by hand it tracks the title, so new posts get a
@@ -321,15 +382,42 @@ function Admin() {
               />
 
               <div className="admin-editor-bar">
-                <label htmlFor="body">Body (Markdown)</label>
+                <label htmlFor="body">Body</label>
                 <button
                   type="button"
                   className="admin-toggle"
                   onClick={() => setPreview((p) => !p)}
                 >
-                  {preview ? "Edit" : "Preview"}
+                  {preview ? "Back to editing" : "Preview"}
                 </button>
               </div>
+
+              {!preview && (
+                <div className="admin-toolbar">
+                  <button type="button" onClick={() => wrapSelection("**")} title="Bold (⌘B)">
+                    <strong>B</strong>
+                  </button>
+                  <button type="button" onClick={() => wrapSelection("*")} title="Italic (⌘I)">
+                    <em>I</em>
+                  </button>
+                  <span className="admin-toolbar-sep" />
+                  <button type="button" onClick={() => prefixLine("## ")} title="Section heading">
+                    H2
+                  </button>
+                  <button type="button" onClick={() => prefixLine("> ")} title="Callout box">
+                    Callout
+                  </button>
+                  <button type="button" onClick={() => prefixLine("- ")} title="Bullet list">
+                    List
+                  </button>
+                  <button type="button" onClick={() => wrapSelection("`")} title="Inline code">
+                    Code
+                  </button>
+                  <span className="admin-toolbar-note">
+                    Select text, then click. Symbols show here; formatting shows in Preview.
+                  </span>
+                </div>
+              )}
 
               {preview ? (
                 <div className="admin-preview post-body">
@@ -340,11 +428,13 @@ function Admin() {
               ) : (
                 <textarea
                   id="body"
+                  ref={bodyRef}
                   className="admin-body-input"
                   rows={20}
                   value={draft.body}
                   onChange={(e) => update("body", e.target.value)}
-                  placeholder={"## A heading\n\nWrite in Markdown."}
+                  onKeyDown={handleBodyKeys}
+                  placeholder={"## A heading\n\nWrite here. **Bold** and *italic* work like this."}
                 />
               )}
 

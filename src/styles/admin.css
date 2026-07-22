@@ -294,6 +294,55 @@
 
 .admin-editor-bar label { margin-bottom: 0; }
 
+/* ── Formatting toolbar ── */
+.admin-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.5rem;
+  background: #faf8ff;
+  border: 1px solid var(--rule-strong);
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+}
+
+.admin-toolbar button {
+  min-width: 2rem;
+  padding: 0.3rem 0.55rem;
+  font-family: inherit;
+  font-size: 0.78rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.admin-toolbar button:hover {
+  background: var(--lavender-tint);
+  border-color: var(--lavender);
+}
+
+.admin-toolbar-sep {
+  width: 1px;
+  height: 1.1rem;
+  background: var(--rule-strong);
+  margin: 0 0.25rem;
+}
+
+.admin-toolbar-note {
+  flex: 1 1 12rem;
+  min-width: 0;
+  font-size: 0.72rem;
+  color: var(--muted-text);
+  padding-left: 0.4rem;
+}
+
+/* Toolbar and textarea read as one control. */
+.admin-toolbar + .admin-body-input { border-radius: 0 0 3px 3px; }
+
 .admin-preview {
   background: #fff;
   border: 1px solid var(--rule-strong);
