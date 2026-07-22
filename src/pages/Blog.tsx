@@ -9,15 +9,13 @@ function Blog() {
   return (
     <div className="blog">
       <Meta
-        title="Writing — Madeline Gall"
+        title="The Product Blog — Madeline Gall"
         description="Essays on product management, operational software, and building AI systems that hold up in production."
         path="/blog"
       />
 
       <header className="blog-header">
-        {/* Kept for the document outline and search results, hidden visually:
-            the nav already says Writing, so on screen it was just repetition. */}
-        <h1 className="visually-hidden">Writing</h1>
+        <h1 className="blog-title">The Product Blog</h1>
         <p className="blog-intro">
           Product decisions, operational software, and what AI systems do once real people
           use them.

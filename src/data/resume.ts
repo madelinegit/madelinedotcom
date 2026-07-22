@@ -68,17 +68,20 @@ export const education: Credential[] = [
   {
     institution: "University of Virginia (Darden)",
     award: "Certification — Digital Product Management",
-    year: "2024",
+    // ATS9 says 2024; the correct year is 2026. Needs fixing on the resume too.
+    year: "2026",
   },
   {
     institution: "Colorado Technical University",
     award: "Full-Stack Software Development Certification",
-    detail: "via Coding Dojo · Python, MySQL, JavaScript, React, version control",
+    detail: ["via Coding Dojo · Python, MySQL, JavaScript, React, version control"],
     year: "2023",
   },
   {
     institution: "Project Management Institute",
     award: "Certified Associate in Project Management (CAPM)",
+    // Hidden by choice, not removed. Set this to false to show it again.
+    hidden: true,
   },
   {
     institution: "Ohio University",
@@ -87,8 +90,10 @@ export const education: Credential[] = [
     // and pending correction on the resume itself:
     //   - ATS9 says "Information Technology"; the degree is Computer Technology.
     //   - ATS9 omits the Strategic Business Leadership certificate entirely.
-    detail:
-      "Associate of Science, Computer Technology · Certificate in Strategic Business Leadership",
+    detail: [
+      "Associate of Science, Computer Technology",
+      "Certificate in Strategic Business Leadership",
+    ],
     year: "2014",
   },
 ];

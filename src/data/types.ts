@@ -13,9 +13,11 @@ export interface Credential {
   institution: string;
   /** The award itself, e.g. "Bachelor of Science, Anthropology". */
   award: string;
-  /** Supporting detail shown under the award. */
-  detail?: string;
+  /** Supporting lines under the award. Each entry renders on its own line. */
+  detail?: string[];
   year?: string;
+  /** Kept in the data but not rendered. Flip to false (or delete) to show it. */
+  hidden?: boolean;
 }
 
 export interface Language {

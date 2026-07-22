@@ -23,7 +23,7 @@ function BlogPost() {
 
       <header className="post-header">
         <Link to="/blog" className="post-back">
-          ← Writing
+          ← The Product Blog
         </Link>
         <h1 className="post-title">{post.title}</h1>
         <p className="post-excerpt">{post.excerpt}</p>
@@ -48,7 +48,7 @@ function BlogPost() {
       <footer className="post-footer">
         <p className="post-byline">Madeline Gall · Technical Product Manager · Truckee, CA</p>
         <Link to="/blog" className="post-back">
-          ← All writing
+          ← All posts
         </Link>
       </footer>
     </article>

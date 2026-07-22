@@ -9,7 +9,7 @@ function Footer() {
         © {new Date().getFullYear()} {site.name}
       </p>
       <nav className="footer-links">
-        <Link to="/blog">Writing</Link>
+        <Link to="/blog">Blog</Link>
         <a href={`mailto:${site.email}`}>{site.email}</a>
       </nav>
     </footer>

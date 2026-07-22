@@ -69,7 +69,7 @@ function Home() {
 
       {/* WRITING */}
       {recentPosts.length > 0 && (
-        <Section id="writing" title="Writing">
+        <Section id="writing" title="The Product Blog">
           {recentPosts.map((post) => (
             <Link key={post.slug} to={`/blog/${post.slug}`} className="writing-teaser">
               <h3 className="writing-teaser-title">{post.title}</h3>
@@ -82,7 +82,7 @@ function Home() {
             </Link>
           ))}
           <Link to="/blog" className="writing-all">
-            All writing →
+            All posts →
           </Link>
         </Section>
       )}
@@ -154,14 +154,16 @@ function Home() {
 
       {/* EDUCATION */}
       <Section id="education" title="Education & Certifications">
-        {education.map((credential) => (
-          <div key={credential.award} className="education-item">
-            <h3>{credential.institution}</h3>
-            <p>{credential.award}</p>
-            {credential.detail && <p>{credential.detail}</p>}
-            {credential.year && <p>{credential.year}</p>}
-          </div>
-        ))}
+        {education
+          .filter((credential) => !credential.hidden)
+          .map((credential) => (
+            <div key={credential.award} className="education-item">
+              <h3>{credential.institution}</h3>
+              <p>{credential.award}</p>
+              {credential.detail?.map((line) => <p key={line}>{line}</p>)}
+              {credential.year && <p>{credential.year}</p>}
+            </div>
+          ))}
 
         <div className="education-item">
           <h4>Languages</h4>
